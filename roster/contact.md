@@ -2,4 +2,5 @@
 
 | Name        | email                   |
 |-------------|-------------------------|
-| Frankie Liu | frankie.y.liu@gmail.com |
+| Frankiie Liu | frankie.y.liu@gmail.com |
+| Vinod Krishnan | vin.sinin@gmail.com |
