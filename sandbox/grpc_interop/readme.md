@@ -37,7 +37,19 @@ go run greeter_client/main.go
 
 # creating a proto
 
-check the makefile in src/grpc directory
+Check the makefile in src/grpc directory.  It is not as daunting as the one below.
+
+The docs one will make feel discouraged.  Why are there so many flags!
+
+```bash
+( cd ../../cmd/protoc-gen-go-grpc && go install . )
+protoc \
+  --go_out=Mgrpc/service_config/service_config.proto=/internal/proto/grpc_service_config:. \
+  --go-grpc_out=Mgrpc/service_config/service_config.proto=/internal/proto/grpc_service_config:. \
+  --go_opt=paths=source_relative \
+  --go-grpc_opt=paths=source_relative \
+  helloworld/helloworld.proto
+```
 
 # running the example
 
