@@ -1,3 +1,21 @@
+<!--ts-->
+   * [purpope](#purpope)
+   * [installing go related stuff](#installing-go-related-stuff)
+      * [test run](#test-run)
+   * [creating a proto](#creating-a-proto)
+   * [running the example](#running-the-example)
+   * [editor](#editor)
+      * [notes](#notes)
+      * [how to deal with the quickfix window](#how-to-deal-with-the-quickfix-window)
+      * [indent](#indent)
+   * [Discord webhook](#discord-webhook)
+   * [generating a toc](#generating-a-toc)
+   * [installing python related stuff](#installing-python-related-stuff)
+
+<!-- Added by: adam, at: Fri Jul 10 10:13:47 PDT 2020 -->
+
+<!--te-->
+
 # purpope
 
 create a grpc between different languages
@@ -111,6 +129,38 @@ echo setlocal noexpandtab tabstop=2 shiftwidth=2 > ~/.vim/after/ftplugin/go.vim
 1. create webhook
 1. now #github should be receiving notification when repo is changed
 1. for pictorial [gist](https://gist.github.com/jagrosh/5b1761213e33fc5b54ec7f6379034a22)
+
+# generating a toc
+
+[github-markdown-toc](https://github.com/ekalinin/github-markdown-toc)
+
+1. add
+
+```html
+<!--ts-->
+   * [purpope](#purpope)
+   * [installing go related stuff](#installing-go-related-stuff)
+      * [test run](#test-run)
+   * [creating a proto](#creating-a-proto)
+   * [running the example](#running-the-example)
+   * [editor](#editor)
+      * [notes](#notes)
+      * [how to deal with the quickfix window](#how-to-deal-with-the-quickfix-window)
+      * [indent](#indent)
+   * [Discord webhook](#discord-webhook)
+   * [generating a toc](#generating-a-toc)
+   * [installing python related stuff](#installing-python-related-stuff)
+
+<!-- Added by: adam, at: Fri Jul 10 10:13:47 PDT 2020 -->
+
+<!--te-->
+```
+
+1. run
+
+```bash
+gh-md-toc --insert readme.md
+```
 
 # installing python related stuff
 
