@@ -1,0 +1,21 @@
+syntax = "proto3";
+
+package message;
+
+// import "google/protobuf/timestamp.proto";
+
+option go_package = "my.org/message";
+
+service Message {
+  rpc Search (Request) returns (Response) {}
+}
+
+message Request {
+  string payload = 1;
+}
+
+message Response {
+  string payload = 1;
+} 
+
+
