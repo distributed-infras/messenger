@@ -28,6 +28,13 @@ For the latter part, I created a env.sh file you can just source
 You can follow the example and clone grpc-go repo and follow the instructions
 in the quickstart.
 
+```bash
+git clone -b v1.30.0 https://github.com/grpc/grpc-go
+cd grpc-go/examples/helloworld
+go run greeter_server/main.go
+go run greeter_client/main.go
+```
+
 # creating a proto
 
 check the makefile in src/grpc directory
