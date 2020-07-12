@@ -10,9 +10,22 @@
       * [indent](#indent)
    * [Discord webhook](#discord-webhook)
    * [generating a toc](#generating-a-toc)
+   * [sparse github checkout](#sparse-github-checkout)
+      * [shallow and sparse clone](#shallow-and-sparse-clone)
+      * [clean out refs](#clean-out-refs)
    * [installing python related stuff](#installing-python-related-stuff)
+   * [running grpc for python](#running-grpc-for-python)
+      * [parallel](#parallel)
+   * [python import from same module](#python-import-from-same-module)
+      * [one shell](#one-shell)
+      * [shell variable](#shell-variable)
+      * [python environment](#python-environment)
+   * [running the example](#running-the-example-1)
+      * [makefile](#makefile)
+      * [details about modules](#details-about-modules)
+   * [bash helpers](#bash-helpers)
 
-<!-- Added by: adam, at: Fri Jul 10 10:13:47 PDT 2020 -->
+<!-- Added by: adam, at: Sun Jul 12 10:42:35 PDT 2020 -->
 
 <!--te-->
 
@@ -292,9 +305,59 @@ install:
     pip install -r requirements.txt
 ```
 
+Here is one using `anaconda` environment.
+
+```make
+$(pyout2): $(proto)
+        source $$(conda info --base)/etc/profile.d/conda.sh
+        conda activate $(pyenv)
+```
+
+# running the example
+
+The example is in the `python` directory.
+
+In one terminal:
+
+```bash
+. ../../env.sh
+make server_start
+```
+
+In another terminal:
+
+```bash
+make client_start
+```
+
+## makefile
+
+In this case decided to just change the `python` executable to point to the one
+in the `virtualenv` directory, so you have to make changes to reflect your
+`virtualenv`.
+
+## details about modules
+
+If you want two modules on the same package to import each other without
+appending the the package name you can do the following:
+
+```python
+# add this to __init__.py
+# For relative imports to work in Python 3.6
+import os, sys; sys.path.append(os.path.dirname(os.path.realpath(__file__)))
+```
+
+[stackoverflow](https://stackoverflow.com/questions/16981921/relative-imports-in-python-3)
+
+
+├── project
+│   ├── package
+│   │   ├── __init__.py
+│   │   ├── module1.py
+│   │   └── module2.py
+│   └── setup.py
+
 # bash helpers
 
 Listing defined functions: `declare -f`
 Listing a function: `type <function_name>`
-
-# 
