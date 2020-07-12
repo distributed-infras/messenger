@@ -350,12 +350,14 @@ import os, sys; sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 [stackoverflow](https://stackoverflow.com/questions/16981921/relative-imports-in-python-3)
 
 
+```
 ├── project
 │   ├── package
 │   │   ├── __init__.py
 │   │   ├── module1.py
 │   │   └── module2.py
 │   └── setup.py
+```
 
 The issue here is that `message_pb2_grpc`:
 
