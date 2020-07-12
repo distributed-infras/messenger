@@ -185,8 +185,116 @@ https://stackoverflow.com/questions/38171899/how-to-reduce-the-depth-of-an-exist
  
 # installing python related stuff
 
+```bash
 pip install grpcio grpcio-tools
+```
 
+You can modify `makefile`.  It is best to run those commands in a
+existing `virtualenv`, or one can modify the makefile and append
+`$(venv)/python` to the python commands, so it runs on the correct
+`virtualenv`.
+ 
 # running grpc for python
 
+We are making use of the same `message.proto` we used for the golang example.
+The point is that we are trying to show interoperability between python and
+golang.
 
+The `makefile` in grpc directory has to be massaged to run in your system.
+Primarily you have to change the `pyenv` variable to point to the one you
+created.  I am using `anaconda` distribution, so you might have to change to
+something else if you are using vanilla `virtualenv`.
+
+If you have a `virtualenv` version, save it under `makefile.venv`, so that
+others can use it.
+
+Basically we are running `grpc_tools.protoc` to create the necesarry hooks
+for python.  Currently I am putting the results in `pyoutdir` which is set
+to `./gpython`.
+
+This will create two files:
+- `message_pb2_grpc.py`
+- `message_pb2`
+
+One handles `grpc` related stuff and the other `protobuf` stuff.  That is, one
+will handle the RPC calls and the other will handle the type conversions.
+
+## parallel
+
+There are supposed two methods to have parallel targets in `makefile`,
+unfortunately they are pretty recent additions, so I didn't have access to them
+in my system, so I cannot put the two targets on the same rule.
+
+Not really helpful, since it doesn't treat the case I am interested in:
+[gnu](https://www.gnu.org/software/make/manual/html_node/Multiple-Targets.html)
+[gnu](http://web.mit.edu/gnu/doc/html/make_4.html)
+
+This provided useful answers:
+
+[stackoverflow](https://stackoverflow.com/questions/2973445/gnu-makefile-rule-generating-a-few-targets-from-a-single-source-file)
+
+Gist:
+
+```make
+target1: dep
+	command
+target2: target1
+	noop
+```
+
+But these seem to be better options, however require new versions of make:
+
+```make
+.NOTPARALLE: target1 target2
+
+target1 target2: dep
+	command
+```
+
+```make
+target1 target2 &: dep
+	command
+```
+
+# python import from same module
+
+Unfortunately the grpc generated imports the other pb script using:
+
+```python
+import message_pb2
+```
+
+This will not work if you put both `message_pb2_grpc` and `message_pb2` on a
+separate module.
+
+## one shell
+
+Since I need to run a couple of commands from the same shell, it is useful to turn on `.ONESHELL` in the `makefile`, otherwise you will have to encapsulate all command with `(command1;command2;etc)` which gets pretty painful.
+
+## shell variable
+
+By default `makefile` uses `/bin/sh`, since I like to activate with `bash` it
+is preferrable to set the shell explicitly: `SHELL=/bin/bash`.
+
+## python environment
+
+Just as in the install, if you want the `makefile` to run correctly the shell
+environment for the commands has to be set.
+
+[stackoverflow](https://stackoverflow.com/questions/24736146/how-to-use-virtualenv-in-makefile)
+
+```make
+.ONESHELL:
+
+.PHONY: install
+install:
+    source path/to/virtualenv/bin/activate
+    pip install -r requirements.txt
+```
+
+# bash helpers
+
+Listing defined functions: `declare -f`
+Listing a function: `type <function_name>`
+
+# 
