@@ -6,6 +6,8 @@ import (
 	"github.com/gomodule/redigo/redis"
 )
 
+// Redis Data types: https://redis.io/topics/data-types
+
 func main() {
 	conn, err := redis.Dial("tcp", ":6379")
 	if err != nil {
