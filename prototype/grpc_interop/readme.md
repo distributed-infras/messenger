@@ -137,23 +137,10 @@ echo setlocal noexpandtab tabstop=2 shiftwidth=2 > ~/.vim/after/ftplugin/go.vim
 1. add
 
 ```html
-<!--ts-->
-   * [purpope](#purpope)
-   * [installing go related stuff](#installing-go-related-stuff)
-      * [test run](#test-run)
-   * [creating a proto](#creating-a-proto)
-   * [running the example](#running-the-example)
-   * [editor](#editor)
-      * [notes](#notes)
-      * [how to deal with the quickfix window](#how-to-deal-with-the-quickfix-window)
-      * [indent](#indent)
-   * [Discord webhook](#discord-webhook)
-   * [generating a toc](#generating-a-toc)
-   * [installing python related stuff](#installing-python-related-stuff)
-
-<!-- Added by: adam, at: Fri Jul 10 10:13:47 PDT 2020 -->
-
-<!--te-->
+<! --ts-->
+<!-- Note remove the space in front of --ts-- and --te-- ->
+<!-- 
+<! --te-->
 ```
 
 1. run
@@ -162,9 +149,44 @@ echo setlocal noexpandtab tabstop=2 shiftwidth=2 > ~/.vim/after/ftplugin/go.vim
 gh-md-toc --insert readme.md
 ```
 
+# sparse github checkout
+
+This is useful for downloading the grpc repo which is very
+large.
+
+```bash
+mkdir <repo>
+cd <repo>
+git init . 
+git remote add origin <url>
+git config core.sparsecheckout true
+echo "examples/python/*" >> .git/info/sparse-checkout
+git pull --depth=1 origin master
+```
+
+## shallow and sparse clone
+
+[cloning a subdirectory](
+https://stackoverflow.com/questions/600079/how-do-i-clone-a-subdirectory-only-of-a-git-repository)
+
+From the most popular solution, follow through with the shallow clone.
+
+[udondan's solution](
+https://stackoverflow.com/questions/600079/how-do-i-clone-a-subdirectory-only-of-a-git-repository/28039894#28039894)
+
+## clean out refs
+
+[depth explained](
+https://til.hashrocket.com/posts/kmhi4k1ct2-reduce-depth-of-an-existing-git-repo-)
+
+[stackoverfloq](
+https://stackoverflow.com/questions/38171899/how-to-reduce-the-depth-of-an-existing-git-clone/46004595#46004595)
+
+ 
 # installing python related stuff
 
-(I haven't used this yet, that is next in the list.)
-
 pip install grpcio grpcio-tools
+
+# running grpc for python
+
 
