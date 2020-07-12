@@ -1,1 +1,4 @@
 .gitmodules
+
+# Jetbrain IDEs
+.idea
