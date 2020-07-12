@@ -1,0 +1,25 @@
+Client offline->online:
+   Client has no concept of snapshot, server keeps snapshot - at different time granularity (yearly, monthly, weekly, daily) rolling
+   Two approaches to bring client upto date:
+   1. client gets the base-snapshot(or just the diff if it already has previous db state) from server and then fetches the pending transactions to apply on it
+   2. client asks server to get the latest-state of db, server creates a snapshot (in-mem copy-on-write semantics for snapshot isolation) for sending, after client receives that it asks for pending transactions.
+
+Whether to send client pre-computed delta or send xtions and make client compute
+Trade off between network bandwidth consumption vs server compute
+minor optimization tbd
+
+Message delivery Priority
+   audio/video is p2p, don't go through server but connection initation needs higher pri
+  realtime msg >> (notification, fetching missed messages/updates, downloading media)
+  Send new messages first or old updates
+Backend Storage:
+  Server side + client side (details in the design doc)
+
+What can we start implementing
+Technology prototype: 
+e.g. gRPC, get familliar, implement msg between server program, 
+WebSocket - send receive messages without offline support
+more technologies listed in the doc
+
+List of subtasks in Design doc 
+Create a speradsheet for folks to signup
