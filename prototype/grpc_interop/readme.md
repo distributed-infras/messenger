@@ -357,7 +357,24 @@ import os, sys; sys.path.append(os.path.dirname(os.path.realpath(__file__)))
 │   │   └── module2.py
 │   └── setup.py
 
+The issue here is that `message_pb2_grpc`:
+
+```python
+import message_pb2 as message__pb2
+```
+
+This will fail since I have added a `__init__.py` to make the `gpython`
+directory into a package.  And modules in the same package have to append the
+package name on the `import` statement even for modules on the same package.
+Since I didn't want to modify the output from `grpc`, I decided to add to the
+`__init__.py` so that imports can be local.
+
 # bash helpers
 
 Listing defined functions: `declare -f`
 Listing a function: `type <function_name>`
+
+# internals analysis (TODO)
+
+It would be useful to understand the functions that are exposed from `grpc`.
+This section's purpose is to go into the internals of the code generated. 
