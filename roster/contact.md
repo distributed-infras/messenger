@@ -9,3 +9,4 @@
 | Bogdan Dumitrescu | bogdan.dumitrescu@gmail.com |
 | Prasenjeet Biswal | pras.wal95@gmail.com        |
 | Asif Pathan       | asif.pathan@gmail.com       |
+| [Raymond Gan](https://github.com/rayning0)       | rayning@gmail.com           |
