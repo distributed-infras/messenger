@@ -6,7 +6,7 @@
 | [Vinod Krishnan](https://github.com/vtkrishn)        | vin.sinin@gmail.com           |
 | [Praveen Saini](https://github.com/PS2U)             | ps.tech@live.com              |
 | [Debkalyan Roy](https://github.com/debkalyan)        | roy.debkalyan@gmail.com       |
-| [Rohith Nedunuri](https://github.com/rohithnedunuri) | nedunurirohith@gmail.com      |
+| [Rohith Nedunuri](https://github.com/rohithnedunuri) | nedunurirohith@gmail.com1      |
 | [Bogdan Dumitrescu](https://github.com/bogdanBDM)    | bogdan.dumitrescu@gmail.com   |
 | [Prasenjeet Biswal](https://github.com/pras95)       | pras.wal95@gmail.com          |
 | [Asif Pathan](https://github.com/npcomp1ete)         | asif.pathan@gmail.com         |
