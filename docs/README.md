@@ -1,0 +1,4 @@
+# FAQ
+
+[faq.md](faq)
+
