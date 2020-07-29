@@ -5,6 +5,10 @@ import (
     "net/http"
     )
 
+func index(w http.ResponseWriter, req *http.Request){
+    fmt.Fprintf(w, "dummy\n")
+}
+
 func hello(w http.ResponseWriter, req *http.Request){
     fmt.Fprintf(w, "hello\n")
 }
@@ -17,6 +21,7 @@ func headers(w http.ResponseWriter, req *http.Request){
 }
 
 func main() {
+    http.HandleFunc("/",index)
     http.HandleFunc("/hello", hello)
     http.HandleFunc("/headers", headers)
 
