@@ -110,59 +110,48 @@ height="7.911in"}
 
 # [](#anchor-19) Sign In
 
-# [](#anchor-20) ![](/messenger/Images/design/Pictures/100000000000019E00000380D9CAFD45EFDD4E5D.jpg){width="3.4319in"
-height="7.411in"}
+# [](#anchor-20) ![](/messenger/Images/design/Pictures/100000000000019E00000380D9CAFD45EFDD4E5D.jpg){width="3.4319in" height="7.411in"}
 
 **Home Screen & Create Group Screens:**
 
 ![](/messenger/Images/design/Pictures/10000201000003BE0000028BFCB91E5A892CCC3E.png){width="6.5in"
 height="4.4165in"}
 
-# [](#anchor-21) ![](/messenger/Images/design/Pictures/1000020100000358000002100C6225AE137187A6.png){width="6.5in"
-height="4.0138in"}
+# [](#anchor-21) ![](/messenger/Images/design/Pictures/1000020100000358000002100C6225AE137187A6.png){width="6.5in" height="4.0138in"}
 
 # [](#anchor-22) Person to person chat
 
-![](/messenger/Images/design/Pictures/10000201000001360000028BEE7E9C444E07B2BB.png){width="3.2291in"
-height="6.7811in"}
+![](/messenger/Images/design/Pictures/10000201000001360000028BEE7E9C444E07B2BB.png){width="3.2291in" height="6.7811in"}
 
-![](/messenger/Images/design/Pictures/1000020100000325000001CEA94DEF1A57DA184B.png){width="6.5in"
-height="3.7362in"}
+![](/messenger/Images/design/Pictures/1000020100000325000001CEA94DEF1A57DA184B.png){width="6.5in" height="3.7362in"}
 
 # [](#anchor-23) Edit chat message
 
-![](/messenger/Images/design/Pictures/1000020100000331000001CCBD1B473ADFED866B.png){width="6.5in"
-height="3.6665in"}
+![](/messenger/Images/design/Pictures/1000020100000331000001CCBD1B473ADFED866B.png){width="6.5in" height="3.6665in"}
 
 # [](#anchor-24) Delete & reply to chat message
 
-![](/messenger/Images/design/Pictures/1000020100000336000001D428A7C5CEB2273B24.png){width="6.5in"
-height="3.6945in"}
+![](/messenger/Images/design/Pictures/1000020100000336000001D428A7C5CEB2273B24.png){width="6.5in" height="3.6945in"}
 
 # [](#anchor-25) Add friend
 
-![](/messenger/Images/design/Pictures/100002010000030D000001C415B7ED6919E0133C.png){width="6.5in"
-height="3.7638in"}
+![](/messenger/Images/design/Pictures/100002010000030D000001C415B7ED6919E0133C.png){width="6.5in" height="3.7638in"}
 
 # [](#anchor-26) Group management
 
-![](/messenger/Images/design/Pictures/10000201000002FA000001A8CCE6A357FD8F1D4E.png){width="6.5in"
-height="3.611in"}
+![](/messenger/Images/design/Pictures/10000201000002FA000001A8CCE6A357FD8F1D4E.png){width="6.5in" height="3.611in"}
 
 # [](#anchor-27) Deleted group chat
 
-![](/messenger/Images/design/Pictures/100002010000031C000001CA42CFDDB18DB8072A.png){width="6.5in"
-height="3.7362in"}
+![](/messenger/Images/design/Pictures/100002010000031C000001CA42CFDDB18DB8072A.png){width="6.5in" height="3.7362in"}
 
 # [](#anchor-28) User profile
 
-![](/messenger/Images/design/Pictures/1000020100000333000001CE457869B52D0EAA5D.png){width="6.5in"
-height="3.6665in"}
+![](/messenger/Images/design/Pictures/1000020100000333000001CE457869B52D0EAA5D.png){width="6.5in" height="3.6665in"}
 
 # [](#anchor-29) Notification
 
-# [](#anchor-30) ![](/messenger/Images/design/Pictures/1000020100000320000001C8378BAE8B803CEBA4.png){width="6.5in"
-height="3.7083in"}
+# [](#anchor-30) ![](/messenger/Images/design/Pictures/1000020100000320000001C8378BAE8B803CEBA4.png){width="6.5in" height="3.7083in"}
 
 # [](#anchor-31) Public APIs
 
@@ -177,6 +166,7 @@ We can uniquely identify a chat user with chatUserID in our system
 # [](#anchor-33) Chat list
 
   ------------------------------------------------------------------------------------
+```go
   ListChats(userID: string, pageIdx: int, pageSize: int): List&lt;ChatThumbnail&gt;\
   \
   ChatThumbnail {\
@@ -190,6 +180,7 @@ We can uniquely identify a chat user with chatUserID in our system
   body string\
   receivedAt time\
   }
+```
   ------------------------------------------------------------------------------------
 
 # [](#anchor-34) Create a peer to peer chat
