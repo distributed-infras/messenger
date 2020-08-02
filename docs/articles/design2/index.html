@@ -30,23 +30,23 @@
 <meta property="og:description" content="HyperChat Design Doc s/chat
 Date: 03/29/2020
 Status: In Progress
-[]{#anchor-1}Objective Build a generic real-time chat infrastructure that is scalable to billions of users.
-[]{#anchor-2}Background Currently, there are 4 major large scale chat systems in the market:
+# Objective Build a generic real-time chat infrastructure that is scalable to billions of users.
+# Background Currently, there are 4 major large scale chat systems in the market:
  Facebook messenger Whatsapp Slack WeChat Telegram  However, none of them provides easy to use APIs or libraries for small businesses to create their own custom service chat system or internal chat app." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="http://distributed-infras.github.io/messenger/articles/design/" />
+<meta property="og:url" content="http://distributed-infras.github.io/messenger/articles/design2/" />
 <meta property="article:published_time" content="2020-08-02T09:37:25-07:00" />
 <meta property="article:modified_time" content="2020-08-02T09:37:25-07:00" />
 <meta itemprop="name" content="Design">
 <meta itemprop="description" content="HyperChat Design Doc s/chat
 Date: 03/29/2020
 Status: In Progress
-[]{#anchor-1}Objective Build a generic real-time chat infrastructure that is scalable to billions of users.
-[]{#anchor-2}Background Currently, there are 4 major large scale chat systems in the market:
+# Objective Build a generic real-time chat infrastructure that is scalable to billions of users.
+# Background Currently, there are 4 major large scale chat systems in the market:
  Facebook messenger Whatsapp Slack WeChat Telegram  However, none of them provides easy to use APIs or libraries for small businesses to create their own custom service chat system or internal chat app.">
 <meta itemprop="datePublished" content="2020-08-02T09:37:25-07:00" />
 <meta itemprop="dateModified" content="2020-08-02T09:37:25-07:00" />
-<meta itemprop="wordCount" content="1637">
+<meta itemprop="wordCount" content="1733">
 
 
 
@@ -56,8 +56,8 @@ Status: In Progress
 <meta name="twitter:description" content="HyperChat Design Doc s/chat
 Date: 03/29/2020
 Status: In Progress
-[]{#anchor-1}Objective Build a generic real-time chat infrastructure that is scalable to billions of users.
-[]{#anchor-2}Background Currently, there are 4 major large scale chat systems in the market:
+# Objective Build a generic real-time chat infrastructure that is scalable to billions of users.
+# Background Currently, there are 4 major large scale chat systems in the market:
  Facebook messenger Whatsapp Slack WeChat Telegram  However, none of them provides easy to use APIs or libraries for small businesses to create their own custom service chat system or internal chat app."/>
 
 	
@@ -124,20 +124,20 @@ Status: In Progress
   <div id="sharing" class="mt3">
 
     
-    <a href="https://www.facebook.com/sharer.php?u=http://distributed-infras.github.io/messenger/articles/design/" class="facebook no-underline" aria-label="share on Facebook">
+    <a href="https://www.facebook.com/sharer.php?u=http://distributed-infras.github.io/messenger/articles/design2/" class="facebook no-underline" aria-label="share on Facebook">
       <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
 
     </a>
 
     
     
-    <a href="https://twitter.com/share?url=http://distributed-infras.github.io/messenger/articles/design/&amp;text=Design" class="twitter no-underline" aria-label="share on Twitter">
+    <a href="https://twitter.com/share?url=http://distributed-infras.github.io/messenger/articles/design2/&amp;text=Design" class="twitter no-underline" aria-label="share on Twitter">
       <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
 
     </a>
 
     
-    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://distributed-infras.github.io/messenger/articles/design/&amp;title=Design" class="linkedin no-underline" aria-label="share on LinkedIn">
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://distributed-infras.github.io/messenger/articles/design2/&amp;title=Design" class="linkedin no-underline" aria-label="share on LinkedIn">
       <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
   <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
 </svg>
@@ -158,10 +158,10 @@ Status: In Progress
 <p><a href="https://api.short-d.com/r/chat"><em>s/chat</em></a></p>
 <p><strong>Date</strong>: 03/29/2020</p>
 <p><strong>Status</strong>: In Progress</p>
-<h1 id="anchor-1objective">[]{#anchor-1}Objective</h1>
+<h1 id="anchor-1-objective">#<a href="#anchor-1"></a> Objective</h1>
 <p>Build a generic real-time chat infrastructure that is scalable to
 billions of users.</p>
-<h1 id="anchor-2background">[]{#anchor-2}Background</h1>
+<h1 id="anchor-2-background">#<a href="#anchor-2"></a> Background</h1>
 <p>Currently, there are 4 major large scale chat systems in the market:</p>
 <ul>
 <li>Facebook messenger</li>
@@ -173,20 +173,20 @@ billions of users.</p>
 <p>However, none of them provides easy to use APIs or libraries for small
 businesses to create their own custom service chat system or internal
 chat app.</p>
-<h1 id="anchor-3requirements">[]{#anchor-3}Requirements</h1>
-<h1 id="anchor-4functional-requirements">[]{#anchor-4}Functional Requirements</h1>
-<h1 id="anchor-5authentication">[]{#anchor-5}Authentication</h1>
+<h1 id="anchor-3-requirements">#<a href="#anchor-3"></a> Requirements</h1>
+<h1 id="anchor-4-functional-requirements">#<a href="#anchor-4"></a> Functional Requirements</h1>
+<h1 id="anchor-5-authentication">#<a href="#anchor-5"></a> Authentication</h1>
 <ul>
 <li>single sign on</li>
 </ul>
-<h1 id="anchor-6users">[]{#anchor-6}Users</h1>
+<h1 id="anchor-6-users">#<a href="#anchor-6"></a> Users</h1>
 <ul>
 <li>find an user ( replaced with a better way of sharing unique ID )</li>
 <li>save an user to favorites</li>
 <li>block user</li>
 <li>user status &amp; timezone</li>
 </ul>
-<h1 id="anchor-7chat">[]{#anchor-7}Chat</h1>
+<h1 id="anchor-7-chat">#<a href="#anchor-7"></a> Chat</h1>
 <ul>
 <li>1 vs 1 chat with any users ( Passively receive message, offline
 delivery[transaction], device registry, connection hub, database,
@@ -194,14 +194,14 @@ read and received message feedback)</li>
 <li>push notification</li>
 <li>Editing / Delete / Reply to message</li>
 </ul>
-<h1 id="anchor-8group-chat">[]{#anchor-8}Group Chat</h1>
+<h1 id="anchor-8-group-chat">#<a href="#anchor-8"></a> Group Chat</h1>
 <ul>
 <li>create group chat</li>
 <li>add friend into group chat</li>
 <li>remove friends from group chat</li>
 <li>end the group chat</li>
 </ul>
-<h1 id="anchor-9non-functional-requirements">[]{#anchor-9}Non-functional Requirements</h1>
+<h1 id="anchor-9-non-functional-requirements">#<a href="#anchor-9"></a> Non-functional Requirements</h1>
 <ul>
 <li>Very low latency</li>
 <li>Consistency(everyone should see the messages in same order)</li>
@@ -209,14 +209,14 @@ read and received message feedback)</li>
 <li>Very secure &amp; encrypted messages</li>
 <li>Support 1 billion users</li>
 </ul>
-<h1 id="anchor-10extended-requirements">[]{#anchor-10}Extended requirements</h1>
-<p>@ []{#anchor-11}Messaging</p>
+<h1 id="anchor-10-extended-requirements">#<a href="#anchor-10"></a> Extended requirements</h1>
+<p>@ #<a href="#anchor-11"></a> Messaging</p>
 <ul>
 <li>send a picture</li>
 <li>send a video</li>
 <li>send emoji</li>
 </ul>
-<h1 id="anchor-12extra">[]{#anchor-12}Extra</h1>
+<h1 id="anchor-12-extra">#<a href="#anchor-12"></a> Extra</h1>
 <ul>
 <li>offline message support</li>
 <li>see friend tweets</li>
@@ -229,59 +229,59 @@ read and received message feedback)</li>
 <li>Broadcast a message to multiple friends</li>
 <li>Share business card with other users</li>
 </ul>
-<p>[]{#anchor-13}Questions</p>
+<p>#<a href="#anchor-13"></a> Questions</p>
 <ul>
 <li>Do we want to show the status of the users?</li>
 <li>Do we want to track the timezone of the users?</li>
 <li>Do we want to track user&rsquo;s devices?</li>
 </ul>
-<p>[]{#anchor-14}UI Mockup</p>
-<p>[]{#anchor-15}Icon</p>
-<p>[]{#anchor-16}<img src="/Images/design/Pictures/100000000000019E00000380CE9CCA811775B445.jpg" alt="">{width=&quot;3.4272in&rdquo;
+<p>#<a href="#anchor-14"></a> UI Mockup</p>
+<p>#<a href="#anchor-15"></a> Icon</p>
+<p>#<a href="#anchor-16"></a> <img src="/Images/design/Pictures/100000000000019E00000380CE9CCA811775B445.jpg" alt="">{width=&quot;3.4272in&rdquo;
 height=&quot;7.3634in&rdquo;}</p>
-<p>[]{#anchor-17}Launch Screen</p>
-<p>[]{#anchor-18}<img src="/Images/design/Pictures/100000000000019E0000038021CAD32BB56FAC24.jpg" alt="">{width=&quot;3.661in&rdquo;
+<p>#<a href="#anchor-17"></a> Launch Screen</p>
+<p>#<a href="#anchor-18"></a> <img src="/Images/design/Pictures/100000000000019E0000038021CAD32BB56FAC24.jpg" alt="">{width=&quot;3.661in&rdquo;
 height=&quot;7.911in&rdquo;}</p>
-<p>[]{#anchor-19}Sign In</p>
-<p>[]{#anchor-20}<img src="/Images/design/Pictures/100000000000019E00000380D9CAFD45EFDD4E5D.jpg" alt="">{width=&quot;3.4319in&rdquo;
+<p>#<a href="#anchor-19"></a> Sign In</p>
+<p>#<a href="#anchor-20"></a> <img src="/Images/design/Pictures/100000000000019E00000380D9CAFD45EFDD4E5D.jpg" alt="">{width=&quot;3.4319in&rdquo;
 height=&quot;7.411in&rdquo;}</p>
 <p><strong>Home Screen &amp; Create Group Screens:</strong></p>
 <p><img src="/Images/design/Pictures/10000201000003BE0000028BFCB91E5A892CCC3E.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;4.4165in&rdquo;}</p>
-<p>[]{#anchor-21}<img src="/Images/design/Pictures/1000020100000358000002100C6225AE137187A6.png" alt="">{width=&quot;6.5in&rdquo;
+<p>#<a href="#anchor-21"></a> <img src="/Images/design/Pictures/1000020100000358000002100C6225AE137187A6.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;4.0138in&rdquo;}</p>
-<p>[]{#anchor-22}Person to person chat</p>
+<p>#<a href="#anchor-22"></a> Person to person chat</p>
 <p><img src="/Images/design/Pictures/10000201000001360000028BEE7E9C444E07B2BB.png" alt="">{width=&quot;3.2291in&rdquo;
 height=&quot;6.7811in&rdquo;}</p>
 <p><img src="/Images/design/Pictures/1000020100000325000001CEA94DEF1A57DA184B.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;3.7362in&rdquo;}</p>
-<p>[]{#anchor-23}Edit chat message</p>
+<p>#<a href="#anchor-23"></a> Edit chat message</p>
 <p><img src="/Images/design/Pictures/1000020100000331000001CCBD1B473ADFED866B.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;3.6665in&rdquo;}</p>
-<p>[]{#anchor-24}Delete &amp; reply to chat message</p>
+<p>#<a href="#anchor-24"></a> Delete &amp; reply to chat message</p>
 <p><img src="/Images/design/Pictures/1000020100000336000001D428A7C5CEB2273B24.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;3.6945in&rdquo;}</p>
-<p>[]{#anchor-25}Add friend</p>
+<p>#<a href="#anchor-25"></a> Add friend</p>
 <p><img src="/Images/design/Pictures/100002010000030D000001C415B7ED6919E0133C.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;3.7638in&rdquo;}</p>
-<p>[]{#anchor-26}Group management</p>
+<p>#<a href="#anchor-26"></a> Group management</p>
 <p><img src="/Images/design/Pictures/10000201000002FA000001A8CCE6A357FD8F1D4E.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;3.611in&rdquo;}</p>
-<p>[]{#anchor-27}Deleted group chat</p>
+<p>#<a href="#anchor-27"></a> Deleted group chat</p>
 <p><img src="/Images/design/Pictures/100002010000031C000001CA42CFDDB18DB8072A.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;3.7362in&rdquo;}</p>
-<p>[]{#anchor-28}User profile</p>
+<p>#<a href="#anchor-28"></a> User profile</p>
 <p><img src="/Images/design/Pictures/1000020100000333000001CE457869B52D0EAA5D.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;3.6665in&rdquo;}</p>
-<p>[]{#anchor-29}Notification</p>
-<p>[]{#anchor-30}<img src="/Images/design/Pictures/1000020100000320000001C8378BAE8B803CEBA4.png" alt="">{width=&quot;6.5in&rdquo;
+<p>#<a href="#anchor-29"></a> Notification</p>
+<p>#<a href="#anchor-30"></a> <img src="/Images/design/Pictures/1000020100000320000001C8378BAE8B803CEBA4.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;3.7083in&rdquo;}</p>
-<p>[]{#anchor-31}Public APIs</p>
-<p>[]{#anchor-32}Sign in</p>
+<p>#<a href="#anchor-31"></a> Public APIs</p>
+<p>#<a href="#anchor-32"></a> Sign in</p>
 <hr>
 <h2 id="getchatuserid-chatuseridstring">getChatUserID() chatUserID:String</h2>
 <p>We can uniquely identify a chat user with chatUserID in our system</p>
-<p>[]{#anchor-33}Chat list</p>
+<p>#<a href="#anchor-33"></a> Chat list</p>
 <hr>
 <h2 id="heading">ListChats(userID: string, pageIdx: int, pageSize: int): List&lt;ChatThumbnail&gt;<br>
 <br>
@@ -296,22 +296,22 @@ senderName string<br>
 body string<br>
 receivedAt time<br>
 }</h2>
-<p>[]{#anchor-34}Create a peer to peer chat</p>
+<p>#<a href="#anchor-34"></a> Create a peer to peer chat</p>
 <p>Chat is created when becoming favorites</p>
 <hr>
 <h2 id="createpeertopeerchatinitiatorid-string-receiveruserid-string-chatid-string">createPeerToPeerChat(initiatorID string, receiverUserID string): chatID string</h2>
 <p>Comment: consider creating a chatID from directly sending on the first
 time.</p>
-<p>[]{#anchor-35}Create a group chat</p>
+<p>#<a href="#anchor-35"></a> Create a group chat</p>
 <hr>
 <h2 id="creategroupchatownerid-string-groupname-string-friendids-listltstringgt-chatid-string">createGroupChat(ownerID string, groupName string, friendIDs List&lt;String&gt;): chatID string</h2>
 <p>userID: This user is the admin of the group chat by default</p>
 <p>Comment: combining peer into a group of one</p>
-<p>[]{#anchor-36}Sending a message</p>
+<p>#<a href="#anchor-36"></a> Sending a message</p>
 <hr>
 <h2 id="sendmessagesenderid-string-chatid-string-messagebody-string-messageid-string">sendMessage(senderID string, chatID string, messageBody string): messageID string</h2>
 <p>Comment: should we add a time from client</p>
-<p>[]{#anchor-37}System event</p>
+<p>#<a href="#anchor-37"></a> System event</p>
 <hr>
 <h2 id="receivemessagecallbackchatid-string-message-message">receiveMessageCallback(chatID string, message Message)</h2>
 <p>This functional is invoked by eventbus when the client received a
@@ -338,7 +338,7 @@ isReceived boolean<br>
 isSent boolean<br>
 }</h2>
 <p>// Include all the people who read the message</p>
-<p>[]{#anchor-38}Editing and deleting a message</p>
+<p>#<a href="#anchor-38"></a> Editing and deleting a message</p>
 <hr>
 <h2 id="heading-2">editMessage(senderID string, chatID string, messageID string, messageBody string)<br>
 deleteMessage(senderID string, chatID string, messageID string)<br>
@@ -350,7 +350,7 @@ type: String<br>
 updatedMessage: *String<br>
 }</h2>
 <p>Type: Delete, Edit</p>
-<p>[]{#anchor-39}Reply to a message</p>
+<p>#<a href="#anchor-39"></a> Reply to a message</p>
 <hr>
 <h2 id="replymessagesenderid-string-chatid-string-messageid-string-messagebody-string-messageid-string">replyMessage(senderID string, chatID string, messageID string, messageBody string): messageID string</h2>
 <p>// Message being replied will show up right on top of the response for
@@ -360,20 +360,20 @@ others, the old message body will be kept on top of the reply. However,
 when the user clicks on the old message, then it directs the user to the
 edited message. If the message is deleted, we don’t perform any
 redirects.</p>
-<p>[]{#anchor-40}Social network discovery</p>
+<p>#<a href="#anchor-40"></a> Social network discovery</p>
 <p>// Everyone can chat with others if they can discover the receiver and
 they are not blocked by receiver</p>
 <p>Optional: <strong>discoverPeopleNearBy</strong>() userIDs List&lt;String&gt; //
 Bluetooth</p>
-<p>[]{#anchor-41}Favorites</p>
+<p>#<a href="#anchor-41"></a> Favorites</p>
 <hr>
 <h2 id="addasfavoriteuserid-string-favoriteid-string">getFavorites(userID string): favoriteIDs List&lt;String&gt;<br>
 addAsFavorite(userID string, favoriteI.D string)</h2>
-<p>[]{#anchor-42}Invitation to new users</p>
+<p>#<a href="#anchor-42"></a> Invitation to new users</p>
 <hr>
 <h2 id="retrieveuseridfrominvitationinvitationlink-string-userid-string">getInvitationLink(userID string): invitationLink string<br>
 retrieveUserIDFromInvitation(invitationLink string): userID string</h2>
-<p>[]{#anchor-43}Group management</p>
+<p>#<a href="#anchor-43"></a> Group management</p>
 <hr>
 <h2 id="heading-3">getMembers(userID string, groupID string): userIDs List&lt;String&gt;<br>
 // ChatID is associated with a groupID<br>
@@ -389,7 +389,7 @@ GroupInfo {<br>
 name string<br>
 icon Array&lt;Byte&gt;<br>
 }</h2>
-<p>[]{#anchor-44}Profile</p>
+<p>#<a href="#anchor-44"></a> Profile</p>
 <hr>
 <h2 id="heading-4">getUserInfo(userID string): userInfo UserInfo<br>
 updateUserInfo(userID string, userInfo UserInfo)<br>
@@ -400,10 +400,10 @@ UserInfo {<br>
 name string<br>
 icon Array&lt;Byte&gt;<br>
 }</h2>
-<p>[]{#anchor-45}Notification settings</p>
+<p>#<a href="#anchor-45"></a> Notification settings</p>
 <p>// app local setting</p>
 <p>// Receive message. Users determine whether they are notified</p>
-<p>[]{#anchor-46}Request missed updates / messages during offline</p>
+<p>#<a href="#anchor-46"></a> Request missed updates / messages during offline</p>
 <p>+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
 | getLatestTransctionID(chatID: string): String                         |
 |                                                                       |
@@ -443,13 +443,13 @@ icon Array&lt;Byte&gt;<br>
 | fetchDelta(chatID: String, clientTransactionID: String?,              |
 | latestTransactionID: String): Delta                                   |
 +&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+</p>
-<p>[]{#anchor-47}Database Schema</p>
-<p>[]{#anchor-48}<img src="/Images/design/Pictures/100002010000028A00000276FC117A13CBAB3498.png" alt="">{width=&quot;6.5in&rdquo;
+<p>#<a href="#anchor-47"></a> Database Schema</p>
+<p>#<a href="#anchor-48"></a> <img src="/Images/design/Pictures/100002010000028A00000276FC117A13CBAB3498.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;6.3055in&rdquo;}</p>
 <p>Note:</p>
 <p>user_message_status: Status can be one of [Read, Received, Sent]</p>
-<p>[]{#anchor-49}Capacity Estimation &amp; Constraint</p>
-<p>[]{#anchor-50}Assumptions</p>
+<p>#<a href="#anchor-49"></a> Capacity Estimation &amp; Constraint</p>
+<p>#<a href="#anchor-50"></a> Assumptions</p>
 <ul>
 <li>500 millions daily active users</li>
 <li>Peer to peer 50 msg/day</li>
@@ -458,21 +458,21 @@ height=&quot;6.3055in&rdquo;}</p>
 <li>5 groups/user</li>
 <li>100 bytes/msg</li>
 </ul>
-<p>[]{#anchor-51}Storage</p>
+<p>#<a href="#anchor-51"></a> Storage</p>
 <p>5e+8 (50 + 5 . 10) 100 = 5 TB/day = 3.65 PB / 2 yr</p>
-<p>[]{#anchor-52}Bandwidth</p>
+<p>#<a href="#anchor-52"></a> Bandwidth</p>
 <p>5e8 (50 . 2 + 5 . 10 . 50) 100 / (60 . 60 . 24) = 1.5 GB/s</p>
-<p>[]{#anchor-53}Cache Memory</p>
-<p>[]{#anchor-54}High Level Architecture</p>
-<p>[]{#anchor-55}Real-time messaging delivery</p>
-<p>[]{#anchor-56}Peer to peer messaging</p>
-<p>[]{#anchor-57}<img src="/Images/design/Pictures/10000000000003CA000001F0B18B278804C2D925.jpg" alt="">{width=&quot;6.3437in&rdquo;
+<p>#<a href="#anchor-53"></a> Cache Memory</p>
+<p>#<a href="#anchor-54"></a> High Level Architecture</p>
+<p>#<a href="#anchor-55"></a> Real-time messaging delivery</p>
+<p>#<a href="#anchor-56"></a> Peer to peer messaging</p>
+<p>#<a href="#anchor-57"></a> <img src="/Images/design/Pictures/10000000000003CA000001F0B18B278804C2D925.jpg" alt="">{width=&quot;6.3437in&rdquo;
 height=&quot;2.9945in&rdquo;}</p>
-<p>[]{#anchor-58}NAT Penetration</p>
-<p>[]{#anchor-59}<img src="/Images/design/Pictures/10000201000007F800000530ADE009BB559A2FBB.png" alt="">{width=&quot;5.6402in&rdquo;
+<p>#<a href="#anchor-58"></a> NAT Penetration</p>
+<p>#<a href="#anchor-59"></a> <img src="/Images/design/Pictures/10000201000007F800000530ADE009BB559A2FBB.png" alt="">{width=&quot;5.6402in&rdquo;
 height=&quot;3.6791in&rdquo;}</p>
-<p>[]{#anchor-60}Client/Server Architecture</p>
-<p>[]{#anchor-61}<img src="/Images/design/Pictures/10000000000004600000039927663B3F794D80D3.png" alt="">{width=&quot;6.5in&rdquo;
+<p>#<a href="#anchor-60"></a> Client/Server Architecture</p>
+<p>#<a href="#anchor-61"></a> <img src="/Images/design/Pictures/10000000000004600000039927663B3F794D80D3.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;5.3472in&rdquo;}</p>
 <p>The system has 3 layers:</p>
 <ul>
@@ -483,7 +483,7 @@ cluster</li>
 </ul>
 <p><img src="/Images/design/Pictures/10000000000009C4000006AEB2DFAE1EC49E38D5.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;4.4445in&rdquo;}</p>
-<p>[]{#anchor-62}<img src="/Images/design/Pictures/10000000000009C4000006EF010ABA0BC5BD98FD.png" alt="">{width=&quot;6.5in&rdquo;
+<p>#<a href="#anchor-62"></a> <img src="/Images/design/Pictures/10000000000009C4000006EF010ABA0BC5BD98FD.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;4.611in&rdquo;}</p>
 <p>3 layers</p>
 <ol>
@@ -501,7 +501,7 @@ NoSQL ) / Postgres ( SQL ) / MySQL ( SQL ) [DynamoDB ( NoSQL ), Aurora
 <p>2 + 3 =&gt; Firebase ( NoSQL )</p>
 <p>Multiple client delivery &amp; ACK priorities?</p>
 <p>Assume 1 user only has 1 device for v1.</p>
-<p>[]{#anchor-63}Recommendation</p>
+<p>#<a href="#anchor-63"></a> Recommendation</p>
 <ol>
 <li>Use client/server architecture for V1</li>
 <li>Define the interface of 3 layers</li>
@@ -513,8 +513,8 @@ easier to implement ( Voted with Raw Socket: 1, WebSocket: 4, MQTT:
 <li>Use NoSQL as backend data store ( Vote NoSQL:7 SQL: 3 )</li>
 </ol>
 <p>Message status update?</p>
-<p>[]{#anchor-64}<strong>Detailed Component Design</strong></p>
-<p>[]{#anchor-65}Real-time messaging
+<p>#<a href="#anchor-64"></a> <strong>Detailed Component Design</strong></p>
+<p>#<a href="#anchor-65"></a> Real-time messaging
 delivery<img src="/Images/design/Pictures/10000000000009C400000559C74D4DD02C7AA6D3.png" alt="">{width=&quot;5.6516in&rdquo;
 height=&quot;3.089in&rdquo;}</p>
 <p>Connection Hub</p>
@@ -546,50 +546,50 @@ height=&quot;3.089in&rdquo;}</p>
 <ul>
 <li>Connect with client</li>
 </ul>
-<p>[]{#anchor-66}Notification when app is not running</p>
+<p>#<a href="#anchor-66"></a> Notification when app is not running</p>
 <p><img src="/Images/design/Pictures/1000000000000779000004B0F5B0AD7F039FECF1.png" alt="">{width=&quot;4.8075in&rdquo;
 height=&quot;3.0201in&rdquo;}</p>
-<p>[]{#anchor-67}Message transport</p>
+<p>#<a href="#anchor-67"></a> Message transport</p>
 <p><img src="/Images/design/Pictures/10000000000009BE000007C40506BB232BBC5EBF.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;5.1807in&rdquo;}</p>
-<p>[]{#anchor-68}</p>
-<p>[]{#anchor-69}</p>
-<p>[]{#anchor-70}</p>
-<p>[]{#anchor-71}Receive &amp; read message feedback</p>
+<p>#<a href="#anchor-68"></a></p>
+<p>#<a href="#anchor-69"></a></p>
+<p>#<a href="#anchor-70"></a></p>
+<p>#<a href="#anchor-71"></a> Receive &amp; read message feedback</p>
 <p>Online</p>
 <p><img src="/Images/design/Pictures/1000000000000751000006636BBE088957D232B9.png" alt="">{width=&quot;4.9555in&rdquo;
 height=&quot;4.328in&rdquo;}</p>
 <p>Offline</p>
 <p><img src="/Images/design/Pictures/1000000000000801000005BCC8E58124E84D3104.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;4.6528in&rdquo;}</p>
-<p>[]{#anchor-72}Unique ID generation</p>
+<p>#<a href="#anchor-72"></a> Unique ID generation</p>
 <ul>
 <li>user</li>
 <li>chat</li>
 <li>messages in each chat ( counter service )</li>
 </ul>
-<p>[]{#anchor-73}Message update</p>
+<p>#<a href="#anchor-73"></a> Message update</p>
 <p><img src="/Images/design/Pictures/1000000000000386000001722B770B11FB314984.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;2.6665in&rdquo;}</p>
 <p>Mutable State vs Transaction</p>
-<p>[]{#anchor-74}Edit message</p>
+<p>#<a href="#anchor-74"></a> Edit message</p>
 <p>Modify the previous message</p>
-<p>[]{#anchor-75}Delete message</p>
-<p>[]{#anchor-76}Reply to message</p>
+<p>#<a href="#anchor-75"></a> Delete message</p>
+<p>#<a href="#anchor-76"></a> Reply to message</p>
 <p>Create a new message</p>
-<p>[]{#anchor-77}Persistence</p>
-<p>[]{#anchor-78}Protocol negotiation</p>
-<p>[]{#anchor-79}Send message detail</p>
+<p>#<a href="#anchor-77"></a> Persistence</p>
+<p>#<a href="#anchor-78"></a> Protocol negotiation</p>
+<p>#<a href="#anchor-79"></a> Send message detail</p>
 <p><img src="/Images/design/Pictures/10000000000004A20000055D8287F9BBC3A39D01.png" alt="">{width=&quot;6.5in&rdquo;
 height=&quot;7.528in&rdquo;}</p>
-<p>[]{#anchor-80}System Behavior Priority</p>
+<p>#<a href="#anchor-80"></a> System Behavior Priority</p>
 <ol>
 <li>Audio &amp; video chat connection initiation</li>
 <li>Real time message delivery</li>
 <li>Fetch missed messages &amp; updates when going back online</li>
 <li>Download file, audio, video from static media server</li>
 </ol>
-<p>[]{#anchor-81}Message Delivery Priority</p>
+<p>#<a href="#anchor-81"></a> Message Delivery Priority</p>
 <p>Allow only one active device at time</p>
 <ol>
 <li>Web notification preferred</li>
@@ -597,7 +597,7 @@ height=&quot;7.528in&rdquo;}</p>
 <li>Smart watch notification preferred</li>
 </ol>
 <p>Or based on user settings</p>
-<p>[]{#anchor-82}Data Storage</p>
+<p>#<a href="#anchor-82"></a> Data Storage</p>
 <ul>
 <li>
 <p>User data in DB</p>
@@ -626,9 +626,9 @@ height=&quot;7.528in&rdquo;}</p>
 </ul>
 </li>
 </ul>
-<p>[]{#anchor-83}<strong>Data Partitioning</strong></p>
-<p>[]{#anchor-84}<strong>Fault Tolerance</strong></p>
-<p>[]{#anchor-85}Point of failures</p>
+<p>#<a href="#anchor-83"></a> <strong>Data Partitioning</strong></p>
+<p>#<a href="#anchor-84"></a> <strong>Fault Tolerance</strong></p>
+<p>#<a href="#anchor-85"></a> Point of failures</p>
 <ol>
 <li>
 <p>Network congested</p>
@@ -664,56 +664,56 @@ c)  Different process hogging the CPU</p>
 </blockquote>
 </li>
 </ol>
-<p>[]{#anchor-86}<strong>Security</strong></p>
-<p>[]{#anchor-87}<strong>Caching</strong></p>
-<p>[]{#anchor-88}<strong>Testing</strong></p>
-<p>[]{#anchor-89}<strong>Appendix</strong></p>
+<p>#<a href="#anchor-86"></a> <strong>Security</strong></p>
+<p>#<a href="#anchor-87"></a> <strong>Caching</strong></p>
+<p>#<a href="#anchor-88"></a> <strong>Testing</strong></p>
+<p>#<a href="#anchor-89"></a> <strong>Appendix</strong></p>
 <p><a href="https://api.short-d.com/r/chat-diagram"><em>System Diagrams</em></a></p>
-<p>[]{#anchor-90}<strong>References</strong></p>
-<p>[]{#anchor-91}<strong>Contributions</strong></p>
+<p>#<a href="#anchor-90"></a> <strong>References</strong></p>
+<p>#<a href="#anchor-91"></a> <strong>Contributions</strong></p>
 <p>Please add your name if you have already contributed in the following
 section. If you are planning to contribute, please mark [TODO] beside
 your name.</p>
-<p>[]{#anchor-92}P2P Architecture</p>
-<p>[]{#anchor-93}C/S Architecture</p>
+<p>#<a href="#anchor-92"></a> P2P Architecture</p>
+<p>#<a href="#anchor-93"></a> C/S Architecture</p>
 <p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
 <p><a href="https://www.linkedin.com/in/atanikonda"><em>Ajay Tanikonda</em></a></p>
 <p><a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a></p>
 <p><a href="https://www.linkedin.com/in/frankieyliu"><em>Frankie Liu</em></a></p>
 <p><em>Rohith Nedunuri</em>[TODO]</p>
-<p>[]{#anchor-94}API Design</p>
+<p>#<a href="#anchor-94"></a> API Design</p>
 <p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
 <p><a href="https://www.linkedin.com/in/anilnandamuri/"><em>Anil Kumar Nandamuri</em></a></p>
 <p><a href="https://www.linkedin.com/in/rohithnedunuri/"><em>Rohith Nedunuri</em></a><br>
 <a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a></p>
 <p><a href="https://www.linkedin.com/in/frankieyliu"><em>Frankie Liu</em></a></p>
 <p><a href="https://www.linkedin.com/in/vinsinin/"><em>Vinod Krishnan</em></a> [TODO]</p>
-<p>[]{#anchor-95}Database Schema</p>
+<p>#<a href="#anchor-95"></a> Database Schema</p>
 <p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
 <p><a href="https://www.linkedin.com/in/anilnandamuri/"><em>Anil Kumar Nandamuri</em></a></p>
 <p><a href="https://www.linkedin.com/in/rohithnedunuri/"><em>Rohith Nedunuri</em></a><br>
 <a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a></p>
 <p><a href="https://www.linkedin.com/in/frankieyliu"><em>Frankie Liu</em></a></p>
 <p><a href="https://www.linkedin.com/in/vinsinin/"><em>Vinod Krishnan</em></a> [TODO]</p>
-<p>[]{#anchor-96}Message Queue ( Kafka )</p>
+<p>#<a href="#anchor-96"></a> Message Queue ( Kafka )</p>
 <p><a href="https://www.linkedin.com/in/rohithnedunuri/"><em>Rohith
 Nedunuri</em></a>[TODO]<br>
 <a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a> [TODO]</p>
 <p><a href="https://www.linkedin.com/in/abhijitkaranjkar/"><em>Abhijit kajranjkar</em></a>
 [TODO]</p>
 <p><a href="https://www.linkedin.com/in/vinsinin/"><em>Vinod Krishnan</em></a> [TODO]</p>
-<p>[]{#anchor-97}Fault Tolerance</p>
+<p>#<a href="#anchor-97"></a> Fault Tolerance</p>
 <p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
 <p><a href="https://www.linkedin.com/in/rohithnedunuri/"><em>Rohith
 Nedunuri</em></a>[TODO]<br>
 <a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a> [TODO]</p>
-<p>[]{#anchor-98}Transaction System</p>
+<p>#<a href="#anchor-98"></a> Transaction System</p>
 <p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
 <p><a href="https://www.linkedin.com/in/frankieyliu"><em>Frankie Liu</em></a><br>
 <a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a> [TODO]</p>
 <p><a href="https://www.linkedin.com/in/vinsinin/"><em>Vinod Krishnan</em></a> [TODO]</p>
 <p><a href="https://www.linkedin.com/in/rohithnedunuri/"><em>Rohith Nedunuri</em></a>[TODO]</p>
-<p>[]{#anchor-99}UI Mockup</p>
+<p>#<a href="#anchor-99"></a> UI Mockup</p>
 <p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
 <p><a href="https://www.linkedin.com/in/atanikonda"><em>Ajay Tanikonda</em></a><br>
 <a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a></p>
