@@ -94,68 +94,68 @@ chat app.
 
 []{#anchor-15}Icon
 
-[]{#anchor-16}![](./Images/Pictures/100000000000019E00000380CE9CCA811775B445.jpg){width="3.4272in"
+[]{#anchor-16}![](/Images/design/Pictures/100000000000019E00000380CE9CCA811775B445.jpg){width="3.4272in"
 height="7.3634in"}
 
 []{#anchor-17}Launch Screen
 
-[]{#anchor-18}![](./Images/Pictures/100000000000019E0000038021CAD32BB56FAC24.jpg){width="3.661in"
+[]{#anchor-18}![](/Images/design/Pictures/100000000000019E0000038021CAD32BB56FAC24.jpg){width="3.661in"
 height="7.911in"}
 
 []{#anchor-19}Sign In
 
-[]{#anchor-20}![](./Images/Pictures/100000000000019E00000380D9CAFD45EFDD4E5D.jpg){width="3.4319in"
+[]{#anchor-20}![](/Images/design/Pictures/100000000000019E00000380D9CAFD45EFDD4E5D.jpg){width="3.4319in"
 height="7.411in"}
 
 **Home Screen & Create Group Screens:**
 
-![](./Images/Pictures/10000201000003BE0000028BFCB91E5A892CCC3E.png){width="6.5in"
+![](/Images/design/Pictures/10000201000003BE0000028BFCB91E5A892CCC3E.png){width="6.5in"
 height="4.4165in"}
 
-[]{#anchor-21}![](./Images/Pictures/1000020100000358000002100C6225AE137187A6.png){width="6.5in"
+[]{#anchor-21}![](/Images/design/Pictures/1000020100000358000002100C6225AE137187A6.png){width="6.5in"
 height="4.0138in"}
 
 []{#anchor-22}Person to person chat
 
-![](./Images/Pictures/10000201000001360000028BEE7E9C444E07B2BB.png){width="3.2291in"
+![](/Images/design/Pictures/10000201000001360000028BEE7E9C444E07B2BB.png){width="3.2291in"
 height="6.7811in"}
 
-![](./Images/Pictures/1000020100000325000001CEA94DEF1A57DA184B.png){width="6.5in"
+![](/Images/design/Pictures/1000020100000325000001CEA94DEF1A57DA184B.png){width="6.5in"
 height="3.7362in"}
 
 []{#anchor-23}Edit chat message
 
-![](./Images/Pictures/1000020100000331000001CCBD1B473ADFED866B.png){width="6.5in"
+![](/Images/design/Pictures/1000020100000331000001CCBD1B473ADFED866B.png){width="6.5in"
 height="3.6665in"}
 
 []{#anchor-24}Delete & reply to chat message
 
-![](./Images/Pictures/1000020100000336000001D428A7C5CEB2273B24.png){width="6.5in"
+![](/Images/design/Pictures/1000020100000336000001D428A7C5CEB2273B24.png){width="6.5in"
 height="3.6945in"}
 
 []{#anchor-25}Add friend
 
-![](./Images/Pictures/100002010000030D000001C415B7ED6919E0133C.png){width="6.5in"
+![](/Images/design/Pictures/100002010000030D000001C415B7ED6919E0133C.png){width="6.5in"
 height="3.7638in"}
 
 []{#anchor-26}Group management
 
-![](./Images/Pictures/10000201000002FA000001A8CCE6A357FD8F1D4E.png){width="6.5in"
+![](/Images/design/Pictures/10000201000002FA000001A8CCE6A357FD8F1D4E.png){width="6.5in"
 height="3.611in"}
 
 []{#anchor-27}Deleted group chat
 
-![](./Images/Pictures/100002010000031C000001CA42CFDDB18DB8072A.png){width="6.5in"
+![](/Images/design/Pictures/100002010000031C000001CA42CFDDB18DB8072A.png){width="6.5in"
 height="3.7362in"}
 
 []{#anchor-28}User profile
 
-![](./Images/Pictures/1000020100000333000001CE457869B52D0EAA5D.png){width="6.5in"
+![](/Images/design/Pictures/1000020100000333000001CE457869B52D0EAA5D.png){width="6.5in"
 height="3.6665in"}
 
 []{#anchor-29}Notification
 
-[]{#anchor-30}![](./Images/Pictures/1000020100000320000001C8378BAE8B803CEBA4.png){width="6.5in"
+[]{#anchor-30}![](/Images/design/Pictures/1000020100000320000001C8378BAE8B803CEBA4.png){width="6.5in"
 height="3.7083in"}
 
 []{#anchor-31}Public APIs
@@ -387,7 +387,7 @@ Bluetooth
 
 []{#anchor-47}Database Schema
 
-[]{#anchor-48}![](./Images/Pictures/100002010000028A00000276FC117A13CBAB3498.png){width="6.5in"
+[]{#anchor-48}![](/Images/design/Pictures/100002010000028A00000276FC117A13CBAB3498.png){width="6.5in"
 height="6.3055in"}
 
 Note:
@@ -421,17 +421,17 @@ user\_message\_status: Status can be one of \[Read, Received, Sent\]
 
 []{#anchor-56}Peer to peer messaging
 
-[]{#anchor-57}![](./Images/Pictures/10000000000003CA000001F0B18B278804C2D925.jpg){width="6.3437in"
+[]{#anchor-57}![](/Images/design/Pictures/10000000000003CA000001F0B18B278804C2D925.jpg){width="6.3437in"
 height="2.9945in"}
 
 []{#anchor-58}NAT Penetration
 
-[]{#anchor-59}![](./Images/Pictures/10000201000007F800000530ADE009BB559A2FBB.png){width="5.6402in"
+[]{#anchor-59}![](/Images/design/Pictures/10000201000007F800000530ADE009BB559A2FBB.png){width="5.6402in"
 height="3.6791in"}
 
 []{#anchor-60}Client/Server Architecture
 
-[]{#anchor-61}![](./Images/Pictures/10000000000004600000039927663B3F794D80D3.png){width="6.5in"
+[]{#anchor-61}![](/Images/design/Pictures/10000000000004600000039927663B3F794D80D3.png){width="6.5in"
 height="5.3472in"}
 
 The system has 3 layers:
@@ -441,10 +441,10 @@ The system has 3 layers:
 -   Persistence layer: save messages for future retrieval
 -   Delivery layer: deliver the message to the receiving clients
 
-![](./Images/Pictures/10000000000009C4000006AEB2DFAE1EC49E38D5.png){width="6.5in"
+![](/Images/design/Pictures/10000000000009C4000006AEB2DFAE1EC49E38D5.png){width="6.5in"
 height="4.4445in"}
 
-[]{#anchor-62}![](./Images/Pictures/10000000000009C4000006EF010ABA0BC5BD98FD.png){width="6.5in"
+[]{#anchor-62}![](/Images/design/Pictures/10000000000009C4000006EF010ABA0BC5BD98FD.png){width="6.5in"
 height="4.611in"}
 
 3 layers
@@ -487,7 +487,7 @@ Message status update?
 []{#anchor-64}**Detailed Component Design**
 
 []{#anchor-65}Real-time messaging
-delivery![](./Images/Pictures/10000000000009C400000559C74D4DD02C7AA6D3.png){width="5.6516in"
+delivery![](/Images/design/Pictures/10000000000009C400000559C74D4DD02C7AA6D3.png){width="5.6516in"
 height="3.089in"}
 
 Connection Hub
@@ -518,12 +518,12 @@ Output
 
 []{#anchor-66}Notification when app is not running
 
-![](./Images/Pictures/1000000000000779000004B0F5B0AD7F039FECF1.png){width="4.8075in"
+![](/Images/design/Pictures/1000000000000779000004B0F5B0AD7F039FECF1.png){width="4.8075in"
 height="3.0201in"}
 
 []{#anchor-67}Message transport
 
-![](./Images/Pictures/10000000000009BE000007C40506BB232BBC5EBF.png){width="6.5in"
+![](/Images/design/Pictures/10000000000009BE000007C40506BB232BBC5EBF.png){width="6.5in"
 height="5.1807in"}
 
 []{#anchor-68}
@@ -536,12 +536,12 @@ height="5.1807in"}
 
 Online
 
-![](./Images/Pictures/1000000000000751000006636BBE088957D232B9.png){width="4.9555in"
+![](/Images/design/Pictures/1000000000000751000006636BBE088957D232B9.png){width="4.9555in"
 height="4.328in"}
 
 Offline
 
-![](./Images/Pictures/1000000000000801000005BCC8E58124E84D3104.png){width="6.5in"
+![](/Images/design/Pictures/1000000000000801000005BCC8E58124E84D3104.png){width="6.5in"
 height="4.6528in"}
 
 []{#anchor-72}Unique ID generation
@@ -552,7 +552,7 @@ height="4.6528in"}
 
 []{#anchor-73}Message update
 
-![](./Images/Pictures/1000000000000386000001722B770B11FB314984.png){width="6.5in"
+![](/Images/design/Pictures/1000000000000386000001722B770B11FB314984.png){width="6.5in"
 height="2.6665in"}
 
 Mutable State vs Transaction
@@ -573,7 +573,7 @@ Create a new message
 
 []{#anchor-79}Send message detail
 
-![](./Images/Pictures/10000000000004A20000055D8287F9BBC3A39D01.png){width="6.5in"
+![](/Images/design/Pictures/10000000000004A20000055D8287F9BBC3A39D01.png){width="6.5in"
 height="7.528in"}
 
 []{#anchor-80}System Behavior Priority
