@@ -1,0 +1,6 @@
+[submodule "sandbox/grpc_interop/grpc-go"]
+	path = sandbox/grpc_interop/grpc-go
+	url = https://github.com/grpc/grpc-go
+[submodule "docs/themes/ananke"]
+	path = docs/themes/ananke
+	url = https://github.com/budparr/gohugo-theme-ananke.git
