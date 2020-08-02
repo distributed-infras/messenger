@@ -4,7 +4,7 @@ date: 2020-08-02T09:37:25-07:00
 draft: true
 ---
 
-[]{#anchor}HyperChat Design Doc
+# []{#anchor}HyperChat Design Doc
 
 [*s/chat*](https://api.short-d.com/r/chat)
 
@@ -12,12 +12,12 @@ draft: true
 
 **Status**: In Progress
 
-[]{#anchor-1}Objective
+# []{#anchor-1}Objective
 
 Build a generic real-time chat infrastructure that is scalable to
 billions of users.
 
-[]{#anchor-2}Background
+# []{#anchor-2}Background
 
 Currently, there are 4 major large scale chat systems in the market:
 
@@ -31,22 +31,22 @@ However, none of them provides easy to use APIs or libraries for small
 businesses to create their own custom service chat system or internal
 chat app.
 
-[]{#anchor-3}Requirements
+# []{#anchor-3}Requirements
 
-[]{#anchor-4}Functional Requirements
+# []{#anchor-4}Functional Requirements
 
-[]{#anchor-5}Authentication
+# []{#anchor-5}Authentication
 
 -   single sign on
 
-[]{#anchor-6}Users
+# []{#anchor-6}Users
 
 -   find an user ( replaced with a better way of sharing unique ID )
 -   save an user to favorites
 -   block user
 -   user status & timezone
 
-[]{#anchor-7}Chat
+# []{#anchor-7}Chat
 
 -   1 vs 1 chat with any users ( Passively receive message, offline
     delivery\[transaction\], device registry, connection hub, database,
@@ -54,14 +54,14 @@ chat app.
 -   push notification
 -   Editing / Delete / Reply to message
 
-[]{#anchor-8}Group Chat
+# []{#anchor-8}Group Chat
 
 -   create group chat
 -   add friend into group chat
 -   remove friends from group chat
 -   end the group chat
 
-[]{#anchor-9}Non-functional Requirements
+# []{#anchor-9}Non-functional Requirements
 
 -   Very low latency
 -   Consistency(everyone should see the messages in same order)
@@ -69,15 +69,15 @@ chat app.
 -   Very secure & encrypted messages
 -   Support 1 billion users
 
-[]{#anchor-10}Extended requirements
+# []{#anchor-10}Extended requirements
 
-[]{#anchor-11}Messaging
+@ []{#anchor-11}Messaging
 
 -   send a picture
 -   send a video
 -   send emoji
 
-[]{#anchor-12}Extra
+# []{#anchor-12}Extra
 
 -   offline message support
 -   see friend tweets

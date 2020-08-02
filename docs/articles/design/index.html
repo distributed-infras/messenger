@@ -27,46 +27,37 @@
     
     
     <meta property="og:title" content="Design" />
-<meta property="og:description" content="[]{#anchor}HyperChat Design Doc
-s/chat
+<meta property="og:description" content="[]{#anchor}HyperChat Design Doc s/chat
 Date: 03/29/2020
 Status: In Progress
-[]{#anchor-1}Objective
-Build a generic real-time chat infrastructure that is scalable to billions of users.
-[]{#anchor-2}Background
-Currently, there are 4 major large scale chat systems in the market:
+[]{#anchor-1}Objective Build a generic real-time chat infrastructure that is scalable to billions of users.
+[]{#anchor-2}Background Currently, there are 4 major large scale chat systems in the market:
  Facebook messenger Whatsapp Slack WeChat Telegram  However, none of them provides easy to use APIs or libraries for small businesses to create their own custom service chat system or internal chat app." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="http://example.org/articles/design/" />
 <meta property="article:published_time" content="2020-08-02T09:37:25-07:00" />
 <meta property="article:modified_time" content="2020-08-02T09:37:25-07:00" />
 <meta itemprop="name" content="Design">
-<meta itemprop="description" content="[]{#anchor}HyperChat Design Doc
-s/chat
+<meta itemprop="description" content="[]{#anchor}HyperChat Design Doc s/chat
 Date: 03/29/2020
 Status: In Progress
-[]{#anchor-1}Objective
-Build a generic real-time chat infrastructure that is scalable to billions of users.
-[]{#anchor-2}Background
-Currently, there are 4 major large scale chat systems in the market:
+[]{#anchor-1}Objective Build a generic real-time chat infrastructure that is scalable to billions of users.
+[]{#anchor-2}Background Currently, there are 4 major large scale chat systems in the market:
  Facebook messenger Whatsapp Slack WeChat Telegram  However, none of them provides easy to use APIs or libraries for small businesses to create their own custom service chat system or internal chat app.">
 <meta itemprop="datePublished" content="2020-08-02T09:37:25-07:00" />
 <meta itemprop="dateModified" content="2020-08-02T09:37:25-07:00" />
-<meta itemprop="wordCount" content="1636">
+<meta itemprop="wordCount" content="1637">
 
 
 
 <meta itemprop="keywords" content="" />
 <meta name="twitter:card" content="summary"/>
 <meta name="twitter:title" content="Design"/>
-<meta name="twitter:description" content="[]{#anchor}HyperChat Design Doc
-s/chat
+<meta name="twitter:description" content="[]{#anchor}HyperChat Design Doc s/chat
 Date: 03/29/2020
 Status: In Progress
-[]{#anchor-1}Objective
-Build a generic real-time chat infrastructure that is scalable to billions of users.
-[]{#anchor-2}Background
-Currently, there are 4 major large scale chat systems in the market:
+[]{#anchor-1}Objective Build a generic real-time chat infrastructure that is scalable to billions of users.
+[]{#anchor-2}Background Currently, there are 4 major large scale chat systems in the market:
  Facebook messenger Whatsapp Slack WeChat Telegram  However, none of them provides easy to use APIs or libraries for small businesses to create their own custom service chat system or internal chat app."/>
 
 	
@@ -163,14 +154,14 @@ Currently, there are 4 major large scale chat systems in the market:
       
       
     </header>
-    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>[]{#anchor}HyperChat Design Doc</p>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><h1 id="anchorhyperchat-design-doc">[]{#anchor}HyperChat Design Doc</h1>
 <p><a href="https://api.short-d.com/r/chat"><em>s/chat</em></a></p>
 <p><strong>Date</strong>: 03/29/2020</p>
 <p><strong>Status</strong>: In Progress</p>
-<p>[]{#anchor-1}Objective</p>
+<h1 id="anchor-1objective">[]{#anchor-1}Objective</h1>
 <p>Build a generic real-time chat infrastructure that is scalable to
 billions of users.</p>
-<p>[]{#anchor-2}Background</p>
+<h1 id="anchor-2background">[]{#anchor-2}Background</h1>
 <p>Currently, there are 4 major large scale chat systems in the market:</p>
 <ul>
 <li>Facebook messenger</li>
@@ -182,20 +173,20 @@ billions of users.</p>
 <p>However, none of them provides easy to use APIs or libraries for small
 businesses to create their own custom service chat system or internal
 chat app.</p>
-<p>[]{#anchor-3}Requirements</p>
-<p>[]{#anchor-4}Functional Requirements</p>
-<p>[]{#anchor-5}Authentication</p>
+<h1 id="anchor-3requirements">[]{#anchor-3}Requirements</h1>
+<h1 id="anchor-4functional-requirements">[]{#anchor-4}Functional Requirements</h1>
+<h1 id="anchor-5authentication">[]{#anchor-5}Authentication</h1>
 <ul>
 <li>single sign on</li>
 </ul>
-<p>[]{#anchor-6}Users</p>
+<h1 id="anchor-6users">[]{#anchor-6}Users</h1>
 <ul>
 <li>find an user ( replaced with a better way of sharing unique ID )</li>
 <li>save an user to favorites</li>
 <li>block user</li>
 <li>user status &amp; timezone</li>
 </ul>
-<p>[]{#anchor-7}Chat</p>
+<h1 id="anchor-7chat">[]{#anchor-7}Chat</h1>
 <ul>
 <li>1 vs 1 chat with any users ( Passively receive message, offline
 delivery[transaction], device registry, connection hub, database,
@@ -203,14 +194,14 @@ read and received message feedback)</li>
 <li>push notification</li>
 <li>Editing / Delete / Reply to message</li>
 </ul>
-<p>[]{#anchor-8}Group Chat</p>
+<h1 id="anchor-8group-chat">[]{#anchor-8}Group Chat</h1>
 <ul>
 <li>create group chat</li>
 <li>add friend into group chat</li>
 <li>remove friends from group chat</li>
 <li>end the group chat</li>
 </ul>
-<p>[]{#anchor-9}Non-functional Requirements</p>
+<h1 id="anchor-9non-functional-requirements">[]{#anchor-9}Non-functional Requirements</h1>
 <ul>
 <li>Very low latency</li>
 <li>Consistency(everyone should see the messages in same order)</li>
@@ -218,14 +209,14 @@ read and received message feedback)</li>
 <li>Very secure &amp; encrypted messages</li>
 <li>Support 1 billion users</li>
 </ul>
-<p>[]{#anchor-10}Extended requirements</p>
-<p>[]{#anchor-11}Messaging</p>
+<h1 id="anchor-10extended-requirements">[]{#anchor-10}Extended requirements</h1>
+<p>@ []{#anchor-11}Messaging</p>
 <ul>
 <li>send a picture</li>
 <li>send a video</li>
 <li>send emoji</li>
 </ul>
-<p>[]{#anchor-12}Extra</p>
+<h1 id="anchor-12extra">[]{#anchor-12}Extra</h1>
 <ul>
 <li>offline message support</li>
 <li>see friend tweets</li>
