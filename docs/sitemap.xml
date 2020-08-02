@@ -3,26 +3,26 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>http://example.org/articles/</loc>
+    <loc>http://distributed-infras.github.io/messenger/articles/</loc>
     <lastmod>2020-08-02T09:37:25-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/articles/design/</loc>
+    <loc>http://distributed-infras.github.io/messenger/articles/design/</loc>
     <lastmod>2020-08-02T09:37:25-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/</loc>
+    <loc>http://distributed-infras.github.io/messenger/</loc>
     <lastmod>2020-08-02T09:37:25-07:00</lastmod>
   </url>
   
   <url>
-    <loc>http://example.org/categories/</loc>
+    <loc>http://distributed-infras.github.io/messenger/categories/</loc>
   </url>
   
   <url>
-    <loc>http://example.org/tags/</loc>
+    <loc>http://distributed-infras.github.io/messenger/tags/</loc>
   </url>
   
 </urlset>
