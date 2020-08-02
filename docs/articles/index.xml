@@ -6,10 +6,27 @@
     <description>Recent content in Articles on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 02 Aug 2020 09:21:28 -0700</lastBuildDate>
+    <lastBuildDate>Sun, 02 Aug 2020 09:37:25 -0700</lastBuildDate>
     
 	<atom:link href="http://example.org/articles/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Design</title>
+      <link>http://example.org/articles/design/</link>
+      <pubDate>Sun, 02 Aug 2020 09:37:25 -0700</pubDate>
+      
+      <guid>http://example.org/articles/design/</guid>
+      <description>[]{#anchor}HyperChat Design Doc
+s/chat
+Date: 03/29/2020
+Status: In Progress
+[]{#anchor-1}Objective
+Build a generic real-time chat infrastructure that is scalable to billions of users.
+[]{#anchor-2}Background
+Currently, there are 4 major large scale chat systems in the market:
+ Facebook messenger Whatsapp Slack WeChat Telegram  However, none of them provides easy to use APIs or libraries for small businesses to create their own custom service chat system or internal chat app.</description>
+    </item>
     
     <item>
       <title>My First Article</title>

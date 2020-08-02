@@ -1,0 +1,784 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    
+    <title>Design | My New Hugo Site</title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1">
+    <meta name="generator" content="Hugo 0.74.3" />
+    
+    
+      <META NAME="ROBOTS" CONTENT="NOINDEX, NOFOLLOW">
+    
+
+    
+    
+      <link href="/dist/css/app.4fc0b62e4b82c997bb0041217cd6b979.css" rel="stylesheet">
+    
+
+    
+
+    
+      
+
+    
+
+    
+    
+    <meta property="og:title" content="Design" />
+<meta property="og:description" content="[]{#anchor}HyperChat Design Doc
+s/chat
+Date: 03/29/2020
+Status: In Progress
+[]{#anchor-1}Objective
+Build a generic real-time chat infrastructure that is scalable to billions of users.
+[]{#anchor-2}Background
+Currently, there are 4 major large scale chat systems in the market:
+ Facebook messenger Whatsapp Slack WeChat Telegram  However, none of them provides easy to use APIs or libraries for small businesses to create their own custom service chat system or internal chat app." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://example.org/articles/design/" />
+<meta property="article:published_time" content="2020-08-02T09:37:25-07:00" />
+<meta property="article:modified_time" content="2020-08-02T09:37:25-07:00" />
+<meta itemprop="name" content="Design">
+<meta itemprop="description" content="[]{#anchor}HyperChat Design Doc
+s/chat
+Date: 03/29/2020
+Status: In Progress
+[]{#anchor-1}Objective
+Build a generic real-time chat infrastructure that is scalable to billions of users.
+[]{#anchor-2}Background
+Currently, there are 4 major large scale chat systems in the market:
+ Facebook messenger Whatsapp Slack WeChat Telegram  However, none of them provides easy to use APIs or libraries for small businesses to create their own custom service chat system or internal chat app.">
+<meta itemprop="datePublished" content="2020-08-02T09:37:25-07:00" />
+<meta itemprop="dateModified" content="2020-08-02T09:37:25-07:00" />
+<meta itemprop="wordCount" content="1636">
+
+
+
+<meta itemprop="keywords" content="" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Design"/>
+<meta name="twitter:description" content="[]{#anchor}HyperChat Design Doc
+s/chat
+Date: 03/29/2020
+Status: In Progress
+[]{#anchor-1}Objective
+Build a generic real-time chat infrastructure that is scalable to billions of users.
+[]{#anchor-2}Background
+Currently, there are 4 major large scale chat systems in the market:
+ Facebook messenger Whatsapp Slack WeChat Telegram  However, none of them provides easy to use APIs or libraries for small businesses to create their own custom service chat system or internal chat app."/>
+
+	
+  </head>
+
+  <body class="ma0 avenir bg-near-white">
+
+    
+   
+  
+
+  <header>
+    <div class="bg-black">
+      <nav class="pv3 ph3 ph4-ns" role="navigation">
+  <div class="flex-l justify-between items-center center">
+    <a href="/" class="f3 fw2 hover-white no-underline white-90 dib">
+      
+        My New Hugo Site
+      
+    </a>
+    <div class="flex-l items-center">
+      
+
+      
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </div>
+  </div>
+</nav>
+
+    </div>
+  </header>
+
+
+
+    <main class="pb7" role="main">
+      
+  
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <aside class="instapaper_ignoref b helvetica tracked">
+          
+        ARTICLES
+      </aside>
+      
+
+
+
+
+  <div id="sharing" class="mt3">
+
+    
+    <a href="https://www.facebook.com/sharer.php?u=http://example.org/articles/design/" class="facebook no-underline" aria-label="share on Facebook">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M28.765,50.32h6.744V33.998h4.499l0.596-5.624h-5.095  l0.007-2.816c0-1.466,0.14-2.253,2.244-2.253h2.812V17.68h-4.5c-5.405,0-7.307,2.729-7.307,7.317v3.377h-3.369v5.625h3.369V50.32z   M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;"/></svg>
+
+    </a>
+
+    
+    
+    <a href="https://twitter.com/share?url=http://example.org/articles/design/&amp;text=Design" class="twitter no-underline" aria-label="share on Twitter">
+      <svg height="32px"  style="enable-background:new 0 0 67 67;" version="1.1" viewBox="0 0 67 67" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M37.167,22.283c-2.619,0.953-4.274,3.411-4.086,6.101  l0.063,1.038l-1.048-0.127c-3.813-0.487-7.145-2.139-9.974-4.915l-1.383-1.377l-0.356,1.017c-0.754,2.267-0.272,4.661,1.299,6.271  c0.838,0.89,0.649,1.017-0.796,0.487c-0.503-0.169-0.943-0.296-0.985-0.233c-0.146,0.149,0.356,2.076,0.754,2.839  c0.545,1.06,1.655,2.097,2.871,2.712l1.027,0.487l-1.215,0.021c-1.173,0-1.215,0.021-1.089,0.467  c0.419,1.377,2.074,2.839,3.918,3.475l1.299,0.444l-1.131,0.678c-1.676,0.976-3.646,1.526-5.616,1.568  C19.775,43.256,19,43.341,19,43.405c0,0.211,2.557,1.397,4.044,1.864c4.463,1.377,9.765,0.783,13.746-1.568  c2.829-1.673,5.657-5,6.978-8.221c0.713-1.716,1.425-4.851,1.425-6.354c0-0.975,0.063-1.102,1.236-2.267  c0.692-0.678,1.341-1.419,1.467-1.631c0.21-0.403,0.188-0.403-0.88-0.043c-1.781,0.636-2.033,0.551-1.152-0.402  c0.649-0.678,1.425-1.907,1.425-2.267c0-0.063-0.314,0.042-0.671,0.233c-0.377,0.212-1.215,0.53-1.844,0.72l-1.131,0.361l-1.027-0.7  c-0.566-0.381-1.361-0.805-1.781-0.932C39.766,21.902,38.131,21.944,37.167,22.283z M33,64C16.432,64,3,50.569,3,34S16.432,4,33,4  s30,13.431,30,30S49.568,64,33,64z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/></svg>
+
+    </a>
+
+    
+    <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=http://example.org/articles/design/&amp;title=Design" class="linkedin no-underline" aria-label="share on LinkedIn">
+      <svg  height="32px"  style="enable-background:new 0 0 65 65;" version="1.1" viewBox="0 0 65 65" width="32px" xml:space="preserve" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path d="M50.837,48.137V36.425c0-6.275-3.35-9.195-7.816-9.195  c-3.604,0-5.219,1.983-6.119,3.374V27.71h-6.79c0.09,1.917,0,20.427,0,20.427h6.79V36.729c0-0.609,0.044-1.219,0.224-1.655  c0.49-1.22,1.607-2.483,3.482-2.483c2.458,0,3.44,1.873,3.44,4.618v10.929H50.837z M22.959,24.922c2.367,0,3.842-1.57,3.842-3.531  c-0.044-2.003-1.475-3.528-3.797-3.528s-3.841,1.524-3.841,3.528c0,1.961,1.474,3.531,3.753,3.531H22.959z M34,64  C17.432,64,4,50.568,4,34C4,17.431,17.432,4,34,4s30,13.431,30,30C64,50.568,50.568,64,34,64z M26.354,48.137V27.71h-6.789v20.427  H26.354z" style="fill-rule:evenodd;clip-rule:evenodd;fill:;"/>
+</svg>
+
+    </a>
+  </div>
+
+
+      <h1 class="f1 athelas mt3 mb1">Design</h1>
+      
+      
+      <time class="f6 mv4 dib tracked" datetime="2020-08-02T09:37:25-07:00">August 2, 2020</time>
+
+      
+      
+    </header>
+    <div class="nested-copy-line-height lh-copy serif f4 nested-links nested-img mid-gray pr4-l w-two-thirds-l"><p>[]{#anchor}HyperChat Design Doc</p>
+<p><a href="https://api.short-d.com/r/chat"><em>s/chat</em></a></p>
+<p><strong>Date</strong>: 03/29/2020</p>
+<p><strong>Status</strong>: In Progress</p>
+<p>[]{#anchor-1}Objective</p>
+<p>Build a generic real-time chat infrastructure that is scalable to
+billions of users.</p>
+<p>[]{#anchor-2}Background</p>
+<p>Currently, there are 4 major large scale chat systems in the market:</p>
+<ul>
+<li>Facebook messenger</li>
+<li>Whatsapp</li>
+<li>Slack</li>
+<li>WeChat</li>
+<li>Telegram</li>
+</ul>
+<p>However, none of them provides easy to use APIs or libraries for small
+businesses to create their own custom service chat system or internal
+chat app.</p>
+<p>[]{#anchor-3}Requirements</p>
+<p>[]{#anchor-4}Functional Requirements</p>
+<p>[]{#anchor-5}Authentication</p>
+<ul>
+<li>single sign on</li>
+</ul>
+<p>[]{#anchor-6}Users</p>
+<ul>
+<li>find an user ( replaced with a better way of sharing unique ID )</li>
+<li>save an user to favorites</li>
+<li>block user</li>
+<li>user status &amp; timezone</li>
+</ul>
+<p>[]{#anchor-7}Chat</p>
+<ul>
+<li>1 vs 1 chat with any users ( Passively receive message, offline
+delivery[transaction], device registry, connection hub, database,
+read and received message feedback)</li>
+<li>push notification</li>
+<li>Editing / Delete / Reply to message</li>
+</ul>
+<p>[]{#anchor-8}Group Chat</p>
+<ul>
+<li>create group chat</li>
+<li>add friend into group chat</li>
+<li>remove friends from group chat</li>
+<li>end the group chat</li>
+</ul>
+<p>[]{#anchor-9}Non-functional Requirements</p>
+<ul>
+<li>Very low latency</li>
+<li>Consistency(everyone should see the messages in same order)</li>
+<li>High availability</li>
+<li>Very secure &amp; encrypted messages</li>
+<li>Support 1 billion users</li>
+</ul>
+<p>[]{#anchor-10}Extended requirements</p>
+<p>[]{#anchor-11}Messaging</p>
+<ul>
+<li>send a picture</li>
+<li>send a video</li>
+<li>send emoji</li>
+</ul>
+<p>[]{#anchor-12}Extra</p>
+<ul>
+<li>offline message support</li>
+<li>see friend tweets</li>
+<li>video call</li>
+<li>discover nearby people (Bluetooth)</li>
+<li>secret chat ( timeout message )</li>
+<li>survey &amp; vote</li>
+<li>send chat history as a email</li>
+<li>admin for group chat and his roles and responsibilities?</li>
+<li>Broadcast a message to multiple friends</li>
+<li>Share business card with other users</li>
+</ul>
+<p>[]{#anchor-13}Questions</p>
+<ul>
+<li>Do we want to show the status of the users?</li>
+<li>Do we want to track the timezone of the users?</li>
+<li>Do we want to track user&rsquo;s devices?</li>
+</ul>
+<p>[]{#anchor-14}UI Mockup</p>
+<p>[]{#anchor-15}Icon</p>
+<p>[]{#anchor-16}<img src="Pictures/100000000000019E00000380CE9CCA811775B445.jpg" alt="">{width=&quot;3.4272in&rdquo;
+height=&quot;7.3634in&rdquo;}</p>
+<p>[]{#anchor-17}Launch Screen</p>
+<p>[]{#anchor-18}<img src="Pictures/100000000000019E0000038021CAD32BB56FAC24.jpg" alt="">{width=&quot;3.661in&rdquo;
+height=&quot;7.911in&rdquo;}</p>
+<p>[]{#anchor-19}Sign In</p>
+<p>[]{#anchor-20}<img src="Pictures/100000000000019E00000380D9CAFD45EFDD4E5D.jpg" alt="">{width=&quot;3.4319in&rdquo;
+height=&quot;7.411in&rdquo;}</p>
+<p><strong>Home Screen &amp; Create Group Screens:</strong></p>
+<p><img src="Pictures/10000201000003BE0000028BFCB91E5A892CCC3E.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;4.4165in&rdquo;}</p>
+<p>[]{#anchor-21}<img src="Pictures/1000020100000358000002100C6225AE137187A6.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;4.0138in&rdquo;}</p>
+<p>[]{#anchor-22}Person to person chat</p>
+<p><img src="Pictures/10000201000001360000028BEE7E9C444E07B2BB.png" alt="">{width=&quot;3.2291in&rdquo;
+height=&quot;6.7811in&rdquo;}</p>
+<p><img src="Pictures/1000020100000325000001CEA94DEF1A57DA184B.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;3.7362in&rdquo;}</p>
+<p>[]{#anchor-23}Edit chat message</p>
+<p><img src="Pictures/1000020100000331000001CCBD1B473ADFED866B.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;3.6665in&rdquo;}</p>
+<p>[]{#anchor-24}Delete &amp; reply to chat message</p>
+<p><img src="Pictures/1000020100000336000001D428A7C5CEB2273B24.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;3.6945in&rdquo;}</p>
+<p>[]{#anchor-25}Add friend</p>
+<p><img src="Pictures/100002010000030D000001C415B7ED6919E0133C.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;3.7638in&rdquo;}</p>
+<p>[]{#anchor-26}Group management</p>
+<p><img src="Pictures/10000201000002FA000001A8CCE6A357FD8F1D4E.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;3.611in&rdquo;}</p>
+<p>[]{#anchor-27}Deleted group chat</p>
+<p><img src="Pictures/100002010000031C000001CA42CFDDB18DB8072A.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;3.7362in&rdquo;}</p>
+<p>[]{#anchor-28}User profile</p>
+<p><img src="Pictures/1000020100000333000001CE457869B52D0EAA5D.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;3.6665in&rdquo;}</p>
+<p>[]{#anchor-29}Notification</p>
+<p>[]{#anchor-30}<img src="Pictures/1000020100000320000001C8378BAE8B803CEBA4.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;3.7083in&rdquo;}</p>
+<p>[]{#anchor-31}Public APIs</p>
+<p>[]{#anchor-32}Sign in</p>
+<hr>
+<h2 id="getchatuserid-chatuseridstring">getChatUserID() chatUserID:String</h2>
+<p>We can uniquely identify a chat user with chatUserID in our system</p>
+<p>[]{#anchor-33}Chat list</p>
+<hr>
+<h2 id="heading">ListChats(userID: string, pageIdx: int, pageSize: int): List&lt;ChatThumbnail&gt;<br>
+<br>
+ChatThumbnail {<br>
+chatID string<br>
+iconURL string<br>
+mostRecentMessage ThumbnailMessage<br>
+}<br>
+<br>
+ThumbnailMessage {<br>
+senderName string<br>
+body string<br>
+receivedAt time<br>
+}</h2>
+<p>[]{#anchor-34}Create a peer to peer chat</p>
+<p>Chat is created when becoming favorites</p>
+<hr>
+<h2 id="createpeertopeerchatinitiatorid-string-receiveruserid-string-chatid-string">createPeerToPeerChat(initiatorID string, receiverUserID string): chatID string</h2>
+<p>Comment: consider creating a chatID from directly sending on the first
+time.</p>
+<p>[]{#anchor-35}Create a group chat</p>
+<hr>
+<h2 id="creategroupchatownerid-string-groupname-string-friendids-listltstringgt-chatid-string">createGroupChat(ownerID string, groupName string, friendIDs List&lt;String&gt;): chatID string</h2>
+<p>userID: This user is the admin of the group chat by default</p>
+<p>Comment: combining peer into a group of one</p>
+<p>[]{#anchor-36}Sending a message</p>
+<hr>
+<h2 id="sendmessagesenderid-string-chatid-string-messagebody-string-messageid-string">sendMessage(senderID string, chatID string, messageBody string): messageID string</h2>
+<p>Comment: should we add a time from client</p>
+<p>[]{#anchor-37}System event</p>
+<hr>
+<h2 id="receivemessagecallbackchatid-string-message-message">receiveMessageCallback(chatID string, message Message)</h2>
+<p>This functional is invoked by eventbus when the client received a
+message from the server</p>
+<hr>
+<h2 id="receiveackcallbackchatid-string-ackmessage-ackmessage">receiveAckCallback(chatID string, ackMessage AckMessage)</h2>
+<hr>
+<h2 id="heading-1">Message {<br>
+messageID string<br>
+senderID string<br>
+sentAt string<br>
+body string<br>
+// Part of proactively retrieving message<br>
+repliedTo *string<br>
+isEdited boolean<br>
+isDelete boolean<br>
+editedAt datetime<br>
+}<br>
+<br>
+AckMessage {<br>
+messageID string<br>
+isRead boolean<br>
+isReceived boolean<br>
+isSent boolean<br>
+}</h2>
+<p>// Include all the people who read the message</p>
+<p>[]{#anchor-38}Editing and deleting a message</p>
+<hr>
+<h2 id="heading-2">editMessage(senderID string, chatID string, messageID string, messageBody string)<br>
+deleteMessage(senderID string, chatID string, messageID string)<br>
+// viewDeleteMessage might need to persist<br>
+<br>
+Update {<br>
+messageID: String<br>
+type: String<br>
+updatedMessage: *String<br>
+}</h2>
+<p>Type: Delete, Edit</p>
+<p>[]{#anchor-39}Reply to a message</p>
+<hr>
+<h2 id="replymessagesenderid-string-chatid-string-messageid-string-messagebody-string-messageid-string">replyMessage(senderID string, chatID string, messageID string, messageBody string): messageID string</h2>
+<p>// Message being replied will show up right on top of the response for
+it.</p>
+<p>// If the sender tries to edit a message already being replied by
+others, the old message body will be kept on top of the reply. However,
+when the user clicks on the old message, then it directs the user to the
+edited message. If the message is deleted, we don’t perform any
+redirects.</p>
+<p>[]{#anchor-40}Social network discovery</p>
+<p>// Everyone can chat with others if they can discover the receiver and
+they are not blocked by receiver</p>
+<p>Optional: <strong>discoverPeopleNearBy</strong>() userIDs List&lt;String&gt; //
+Bluetooth</p>
+<p>[]{#anchor-41}Favorites</p>
+<hr>
+<h2 id="addasfavoriteuserid-string-favoriteid-string">getFavorites(userID string): favoriteIDs List&lt;String&gt;<br>
+addAsFavorite(userID string, favoriteI.D string)</h2>
+<p>[]{#anchor-42}Invitation to new users</p>
+<hr>
+<h2 id="retrieveuseridfrominvitationinvitationlink-string-userid-string">getInvitationLink(userID string): invitationLink string<br>
+retrieveUserIDFromInvitation(invitationLink string): userID string</h2>
+<p>[]{#anchor-43}Group management</p>
+<hr>
+<h2 id="heading-3">getMembers(userID string, groupID string): userIDs List&lt;String&gt;<br>
+// ChatID is associated with a groupID<br>
+<br>
+addUserToGroup(adminID string, groupID string, userID string)<br>
+removeUser(adminID string, groupID string, userID string)<br>
+deleteGroup(adminID string, groudID string)<br>
+updateGroupInfo(adminID string, groupID string, groupInfo GroupInfo)<br>
+<br>
+// adminID is retrieved from authentication token<br>
+<br>
+GroupInfo {<br>
+name string<br>
+icon Array&lt;Byte&gt;<br>
+}</h2>
+<p>[]{#anchor-44}Profile</p>
+<hr>
+<h2 id="heading-4">getUserInfo(userID string): userInfo UserInfo<br>
+updateUserInfo(userID string, userInfo UserInfo)<br>
+deleteAccount(userID string)<br>
+blockUser(userID string, blockID string)<br>
+<br>
+UserInfo {<br>
+name string<br>
+icon Array&lt;Byte&gt;<br>
+}</h2>
+<p>[]{#anchor-45}Notification settings</p>
+<p>// app local setting</p>
+<p>// Receive message. Users determine whether they are notified</p>
+<p>[]{#anchor-46}Request missed updates / messages during offline</p>
+<p>+&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| getLatestTransctionID(chatID: string): String                         |
+|                                                                       |
+| Response {                                                            |
+|                                                                       |
+|  snapshot: Snapshot                                                   |
+|                                                                       |
+|  transactions: Array&lt;Transaction&gt;                               |
+|                                                                       |
+| }                                                                     |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+
+| fetchSnapshotAndTransactions(chatID: String, clientTransactionID:     |
+| String?, latestTransactionID: String): Response                       |
+|                                                                       |
+| &mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash; |
+| &mdash;&mdash;                                                                |
+|                                                                       |
+| // Minor optimization                                                 |
+|                                                                       |
+| // Delta = Missed transactions + snapshots                            |
+|                                                                       |
+| // Snapshot aggregates changes between start &amp; end transactions       |
+|                                                                       |
+| Delta {                                                               |
+|                                                                       |
+|  // Missed new messages that may potentially be edited. Deleted new   |
+|                                                                       |
+|  // messages won’t show up                                            |
+|                                                                       |
+|  newMessages: Array&lt;Message&gt;                                    |
+|                                                                       |
+|  // Read, received, edited or deleted old messages on the client.     |
+|                                                                       |
+|  updates: Array&lt;Update&gt;                                         |
+|                                                                       |
+| }\                                                                    |
+| fetchDelta(chatID: String, clientTransactionID: String?,              |
+| latestTransactionID: String): Delta                                   |
++&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;+</p>
+<p>[]{#anchor-47}Database Schema</p>
+<p>[]{#anchor-48}<img src="Pictures/100002010000028A00000276FC117A13CBAB3498.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;6.3055in&rdquo;}</p>
+<p>Note:</p>
+<p>user_message_status: Status can be one of [Read, Received, Sent]</p>
+<p>[]{#anchor-49}Capacity Estimation &amp; Constraint</p>
+<p>[]{#anchor-50}Assumptions</p>
+<ul>
+<li>500 millions daily active users</li>
+<li>Peer to peer 50 msg/day</li>
+<li>10 msg/day/group</li>
+<li>average group size: 50</li>
+<li>5 groups/user</li>
+<li>100 bytes/msg</li>
+</ul>
+<p>[]{#anchor-51}Storage</p>
+<p>5e+8 (50 + 5 . 10) 100 = 5 TB/day = 3.65 PB / 2 yr</p>
+<p>[]{#anchor-52}Bandwidth</p>
+<p>5e8 (50 . 2 + 5 . 10 . 50) 100 / (60 . 60 . 24) = 1.5 GB/s</p>
+<p>[]{#anchor-53}Cache Memory</p>
+<p>[]{#anchor-54}High Level Architecture</p>
+<p>[]{#anchor-55}Real-time messaging delivery</p>
+<p>[]{#anchor-56}Peer to peer messaging</p>
+<p>[]{#anchor-57}<img src="Pictures/10000000000003CA000001F0B18B278804C2D925.jpg" alt="">{width=&quot;6.3437in&rdquo;
+height=&quot;2.9945in&rdquo;}</p>
+<p>[]{#anchor-58}NAT Penetration</p>
+<p>[]{#anchor-59}<img src="Pictures/10000201000007F800000530ADE009BB559A2FBB.png" alt="">{width=&quot;5.6402in&rdquo;
+height=&quot;3.6791in&rdquo;}</p>
+<p>[]{#anchor-60}Client/Server Architecture</p>
+<p>[]{#anchor-61}<img src="Pictures/10000000000004600000039927663B3F794D80D3.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;5.3472in&rdquo;}</p>
+<p>The system has 3 layers:</p>
+<ul>
+<li>Message transfer layer: receive and route message inside the chat
+cluster</li>
+<li>Persistence layer: save messages for future retrieval</li>
+<li>Delivery layer: deliver the message to the receiving clients</li>
+</ul>
+<p><img src="Pictures/10000000000009C4000006AEB2DFAE1EC49E38D5.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;4.4445in&rdquo;}</p>
+<p>[]{#anchor-62}<img src="Pictures/10000000000009C4000006EF010ABA0BC5BD98FD.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;4.611in&rdquo;}</p>
+<p>3 layers</p>
+<ol>
+<li>Delivery layer</li>
+<li>Message transfer layer: Route message between servers</li>
+<li>Persistence layer</li>
+</ol>
+<p>0 =&gt; Background notification: APNS, FCM</p>
+<p>1 =&gt; Long live socket, WebSocket, MQTT, Long-poll, polling</p>
+<p>2 =&gt; Direct RPC between server / Kafka</p>
+<p>3 =&gt; HBase ( Column based NoSQL ) / Cassandra ( NoSQL ) / MongoDB (
+NoSQL ) / Postgres ( SQL ) / MySQL ( SQL ) [DynamoDB ( NoSQL ), Aurora
+(SQL), BigTable (NoSQL), Spanner ( SQL )</p>
+<p>1 + 2 =&gt; Ejabberd</p>
+<p>2 + 3 =&gt; Firebase ( NoSQL )</p>
+<p>Multiple client delivery &amp; ACK priorities?</p>
+<p>Assume 1 user only has 1 device for v1.</p>
+<p>[]{#anchor-63}Recommendation</p>
+<ol>
+<li>Use client/server architecture for V1</li>
+<li>Define the interface of 3 layers</li>
+<li>Message Transfer Layer: Use Kafka as the global message queue for V1
+( Voted with 7 Kafka and 2 RPC)</li>
+<li>Use WebSocket as real-time delivery protocol for V1 because it’s
+easier to implement ( Voted with Raw Socket: 1, WebSocket: 4, MQTT:
+4, Long-pull: 2)</li>
+<li>Use NoSQL as backend data store ( Vote NoSQL:7 SQL: 3 )</li>
+</ol>
+<p>Message status update?</p>
+<p>[]{#anchor-64}<strong>Detailed Component Design</strong></p>
+<p>[]{#anchor-65}Real-time messaging
+delivery<img src="Pictures/10000000000009C400000559C74D4DD02C7AA6D3.png" alt="">{width=&quot;5.6516in&rdquo;
+height=&quot;3.089in&rdquo;}</p>
+<p>Connection Hub</p>
+<p>Input</p>
+<ul>
+<li>Business logic</li>
+</ul>
+<blockquote>
+<p>{</p>
+</blockquote>
+<p>message:</p>
+<p>clientID:</p>
+<blockquote>
+<p>}</p>
+</blockquote>
+<ul>
+<li>Device registry</li>
+</ul>
+<blockquote>
+<p>Health check ( 100 ms )</p>
+</blockquote>
+<ul>
+<li>Client</li>
+</ul>
+<blockquote>
+<p>Request for connection</p>
+</blockquote>
+<p>Output</p>
+<ul>
+<li>Connect with client</li>
+</ul>
+<p>[]{#anchor-66}Notification when app is not running</p>
+<p><img src="Pictures/1000000000000779000004B0F5B0AD7F039FECF1.png" alt="">{width=&quot;4.8075in&rdquo;
+height=&quot;3.0201in&rdquo;}</p>
+<p>[]{#anchor-67}Message transport</p>
+<p><img src="Pictures/10000000000009BE000007C40506BB232BBC5EBF.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;5.1807in&rdquo;}</p>
+<p>[]{#anchor-68}</p>
+<p>[]{#anchor-69}</p>
+<p>[]{#anchor-70}</p>
+<p>[]{#anchor-71}Receive &amp; read message feedback</p>
+<p>Online</p>
+<p><img src="Pictures/1000000000000751000006636BBE088957D232B9.png" alt="">{width=&quot;4.9555in&rdquo;
+height=&quot;4.328in&rdquo;}</p>
+<p>Offline</p>
+<p><img src="Pictures/1000000000000801000005BCC8E58124E84D3104.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;4.6528in&rdquo;}</p>
+<p>[]{#anchor-72}Unique ID generation</p>
+<ul>
+<li>user</li>
+<li>chat</li>
+<li>messages in each chat ( counter service )</li>
+</ul>
+<p>[]{#anchor-73}Message update</p>
+<p><img src="Pictures/1000000000000386000001722B770B11FB314984.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;2.6665in&rdquo;}</p>
+<p>Mutable State vs Transaction</p>
+<p>[]{#anchor-74}Edit message</p>
+<p>Modify the previous message</p>
+<p>[]{#anchor-75}Delete message</p>
+<p>[]{#anchor-76}Reply to message</p>
+<p>Create a new message</p>
+<p>[]{#anchor-77}Persistence</p>
+<p>[]{#anchor-78}Protocol negotiation</p>
+<p>[]{#anchor-79}Send message detail</p>
+<p><img src="Pictures/10000000000004A20000055D8287F9BBC3A39D01.png" alt="">{width=&quot;6.5in&rdquo;
+height=&quot;7.528in&rdquo;}</p>
+<p>[]{#anchor-80}System Behavior Priority</p>
+<ol>
+<li>Audio &amp; video chat connection initiation</li>
+<li>Real time message delivery</li>
+<li>Fetch missed messages &amp; updates when going back online</li>
+<li>Download file, audio, video from static media server</li>
+</ol>
+<p>[]{#anchor-81}Message Delivery Priority</p>
+<p>Allow only one active device at time</p>
+<ol>
+<li>Web notification preferred</li>
+<li>Mobile notification preferred</li>
+<li>Smart watch notification preferred</li>
+</ol>
+<p>Or based on user settings</p>
+<p>[]{#anchor-82}Data Storage</p>
+<ul>
+<li>
+<p>User data in DB</p>
+</li>
+<li>
+<p>Uploaded image, audio &amp; video (file server)</p>
+</li>
+<li>
+<p>Client cache</p>
+<ul>
+<li>
+<p>Authentication token</p>
+</li>
+<li>
+<p>chatID =&gt; lastTransactionID (key-value pair)</p>
+</li>
+<li>
+<p>peer status</p>
+</li>
+<li>
+<p>chatHistory</p>
+</li>
+<li>
+<p>downloaded media</p>
+</li>
+</ul>
+</li>
+</ul>
+<p>[]{#anchor-83}<strong>Data Partitioning</strong></p>
+<p>[]{#anchor-84}<strong>Fault Tolerance</strong></p>
+<p>[]{#anchor-85}Point of failures</p>
+<ol>
+<li>
+<p>Network congested</p>
+</li>
+<li>
+<p>Network temporarily disconnected</p>
+</li>
+<li>
+<p>Network permanently disconnected</p>
+</li>
+<li>
+<p>Server crashes</p>
+</li>
+<li>
+<p>Server restart</p>
+</li>
+<li>
+<p>Disk out of storage</p>
+</li>
+<li>
+<p>Disk failures</p>
+</li>
+<li>
+<p>Service pauses</p>
+<p>a)  Garbage collector stops the world
+b)  Memory swapping to disk
+c)  Different process hogging the CPU</p>
+</li>
+<li>
+<p>Lose of logs due to crashes ( acceptable because it’s only for</p>
+<blockquote>
+<p>internal debugging &amp; monitoring )</p>
+</blockquote>
+</li>
+</ol>
+<p>[]{#anchor-86}<strong>Security</strong></p>
+<p>[]{#anchor-87}<strong>Caching</strong></p>
+<p>[]{#anchor-88}<strong>Testing</strong></p>
+<p>[]{#anchor-89}<strong>Appendix</strong></p>
+<p><a href="https://api.short-d.com/r/chat-diagram"><em>System Diagrams</em></a></p>
+<p>[]{#anchor-90}<strong>References</strong></p>
+<p>[]{#anchor-91}<strong>Contributions</strong></p>
+<p>Please add your name if you have already contributed in the following
+section. If you are planning to contribute, please mark [TODO] beside
+your name.</p>
+<p>[]{#anchor-92}P2P Architecture</p>
+<p>[]{#anchor-93}C/S Architecture</p>
+<p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
+<p><a href="https://www.linkedin.com/in/atanikonda"><em>Ajay Tanikonda</em></a></p>
+<p><a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a></p>
+<p><a href="https://www.linkedin.com/in/frankieyliu"><em>Frankie Liu</em></a></p>
+<p><em>Rohith Nedunuri</em>[TODO]</p>
+<p>[]{#anchor-94}API Design</p>
+<p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
+<p><a href="https://www.linkedin.com/in/anilnandamuri/"><em>Anil Kumar Nandamuri</em></a></p>
+<p><a href="https://www.linkedin.com/in/rohithnedunuri/"><em>Rohith Nedunuri</em></a><br>
+<a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a></p>
+<p><a href="https://www.linkedin.com/in/frankieyliu"><em>Frankie Liu</em></a></p>
+<p><a href="https://www.linkedin.com/in/vinsinin/"><em>Vinod Krishnan</em></a> [TODO]</p>
+<p>[]{#anchor-95}Database Schema</p>
+<p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
+<p><a href="https://www.linkedin.com/in/anilnandamuri/"><em>Anil Kumar Nandamuri</em></a></p>
+<p><a href="https://www.linkedin.com/in/rohithnedunuri/"><em>Rohith Nedunuri</em></a><br>
+<a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a></p>
+<p><a href="https://www.linkedin.com/in/frankieyliu"><em>Frankie Liu</em></a></p>
+<p><a href="https://www.linkedin.com/in/vinsinin/"><em>Vinod Krishnan</em></a> [TODO]</p>
+<p>[]{#anchor-96}Message Queue ( Kafka )</p>
+<p><a href="https://www.linkedin.com/in/rohithnedunuri/"><em>Rohith
+Nedunuri</em></a>[TODO]<br>
+<a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a> [TODO]</p>
+<p><a href="https://www.linkedin.com/in/abhijitkaranjkar/"><em>Abhijit kajranjkar</em></a>
+[TODO]</p>
+<p><a href="https://www.linkedin.com/in/vinsinin/"><em>Vinod Krishnan</em></a> [TODO]</p>
+<p>[]{#anchor-97}Fault Tolerance</p>
+<p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
+<p><a href="https://www.linkedin.com/in/rohithnedunuri/"><em>Rohith
+Nedunuri</em></a>[TODO]<br>
+<a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a> [TODO]</p>
+<p>[]{#anchor-98}Transaction System</p>
+<p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
+<p><a href="https://www.linkedin.com/in/frankieyliu"><em>Frankie Liu</em></a><br>
+<a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a> [TODO]</p>
+<p><a href="https://www.linkedin.com/in/vinsinin/"><em>Vinod Krishnan</em></a> [TODO]</p>
+<p><a href="https://www.linkedin.com/in/rohithnedunuri/"><em>Rohith Nedunuri</em></a>[TODO]</p>
+<p>[]{#anchor-99}UI Mockup</p>
+<p><a href="https://www.linkedin.com/in/yang-liu-416b8669/"><em>Yang Liu</em></a></p>
+<p><a href="https://www.linkedin.com/in/atanikonda"><em>Ajay Tanikonda</em></a><br>
+<a href="http://www.linkedin.com/in/sej-ks"><em>Sejal Shinde</em></a></p>
+<p><a href="https://www.linkedin.com/in/frankieyliu"><em>Frankie Liu</em></a></p>
+<p>Documentation</p>
+<p><a href="https://www.linkedin.com/in/anilnandamuri/"><em>Anil Kumar Nandamuri</em></a></p>
+<p><a href="https://www.linkedin.com/in/frankieyliu"><em>Frankie Liu</em></a></p>
+<p>Coding</p>
+<p>Project/Product Management</p>
+<ul class="pa0">
+  
+</ul>
+<div class="mt6 instapaper_ignoref">
+      
+      
+      </div>
+    </div>
+
+    <aside class="w-30-l mt6-l">
+
+
+
+
+</aside>
+
+  </article>
+
+    </main>
+    <footer class="bg-black bottom-0 w-100 pa3" role="contentinfo">
+  <div class="flex justify-between">
+  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="http://example.org/" >
+    &copy;  My New Hugo Site 2020 
+  </a>
+    <div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+  </div>
+</footer>
+
+    
+
+  <script src="/dist/js/app.3fc0f988d21662902933.js"></script>
+
+
+  </body>
+</html>
