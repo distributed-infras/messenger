@@ -1,6 +1,6 @@
-baseURL = "http://distributed-infras.github.io/messenger"
+baseURL = "http://distributed-infras.github.io/messenger/"
 languageCode = "en-us"
 title = "My New Hugo Site"
 theme = "ananke"
 publishDir = "../docs"
-
+canonifyURLs = true

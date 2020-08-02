@@ -20,8 +20,8 @@
       <description>HyperChat Design Doc s/chat
 Date: 03/29/2020
 Status: In Progress
-# Objective Build a generic real-time chat infrastructure that is scalable to billions of users.
-# Background Currently, there are 4 major large scale chat systems in the market:
+ Objective Build a generic real-time chat infrastructure that is scalable to billions of users.
+ Background Currently, there are 4 major large scale chat systems in the market:
  Facebook messenger Whatsapp Slack WeChat Telegram  However, none of them provides easy to use APIs or libraries for small businesses to create their own custom service chat system or internal chat app.</description>
     </item>
     
