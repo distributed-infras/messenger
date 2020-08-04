@@ -1,0 +1,36 @@
+syntax = "proto3";
+
+import "google/protobuf/empty.proto";
+import "google/protobuf/timestamp.proto";
+
+package proto;
+
+message Message {
+    string chat_id = 1;
+    string message_id = 2;
+    string sender_id = 3;
+    google.protobuf.Timestamp sent_at = 4;
+    string body = 5;
+}
+
+message DeliverMessageRequest {
+    string client_id = 1;
+    Message message = 2;
+}
+
+message RegisterClientRequest {
+    /*
+    BST: height = log(n)
+    {
+      "user_id": "beta",
+      "client_id": "alpha",
+      "issued_at": "2020-20-16 13:00:00"
+    }
+    */
+    string access_token = 1;
+}
+
+service ConnectionHubService {
+    rpc RegisterClient(RegisterClientRequest) returns (google.protobuf.Empty)
+    rpc DeliverMessage(DeliverMessageRequest) returns (google.protobuf.Empty)
+}
