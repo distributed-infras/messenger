@@ -39,18 +39,21 @@ We can uniquely identify a chat user with chatUserID in our system
 
  Chat is created when becoming favorites
 
-  --------------------------------------------------------------------------------
-  createPeerToPeerChat(initiatorID string, receiverUserID string): chatID string
-  --------------------------------------------------------------------------------
+```go
+createPeerToPeerChat(
+  initiatorID string,
+  receiverUserID string):
+  chatID string
+```
 
 Comment: consider creating a chatID from directly sending on the first
 time.
 
 # [](#anchor-35) Create a group chat
 
-  ------------------------------------------------------------------------------------------------
+```go
   createGroupChat(ownerID string, groupName string, friendIDs List&lt;String&gt;): chatID string
-  ------------------------------------------------------------------------------------------------
+```
 
 userID: This user is the admin of the group chat by default
 
