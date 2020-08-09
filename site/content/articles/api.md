@@ -52,7 +52,7 @@ time.
 # [](#anchor-35) Create a group chat
 
 ```go
-  createGroupChat(ownerID string, groupName string, friendIDs List&lt;String&gt;): chatID string
+  createGroupChat(ownerID string, groupName string, friendIDs List<String>): chatID string
 ```
 
 userID: This user is the admin of the group chat by default
@@ -236,4 +236,3 @@ Bluetooth
 | fetchDelta(chatID: String, clientTransactionID: String?,              |
 | latestTransactionID: String): Delta                                   |
 +-----------------------------------------------------------------------+
-
