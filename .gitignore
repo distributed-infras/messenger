@@ -1,3 +1,5 @@
+.gitignore
+hugo
 .gitmodules
 
 # Jetbrain IDEs
