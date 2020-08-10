@@ -22,13 +22,23 @@ as an example.
 # forking and creating pull requests
 
 ```bash
+# Clones the repo
 hub clone http://github.com/distributed-infras/messenger
 cd messenger
-git checkout -b feature/<your-feature-version>
-# make changes
+
+# Create a new branch for your work 
+git checkout -b feature/<your-feature-name>
+
+# add and commit changes
 git commit -am "comment on this feature"
-hub fork --remote-name origin
-git push origin feature/<your-feature-version>
+
+# Line below is optional (advise: don't fork)
+# hub fork --remote-name origin
+
+# push your work to origin
+git push origin feature/<your-feature-name>
+
+# create a pull-request
 hub pull-request
 ```
 
