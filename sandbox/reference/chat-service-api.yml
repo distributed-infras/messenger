@@ -1,0 +1,37 @@
+openapi: 3.0.0
+info:
+  version: 0.0.1
+  title: HyperChat
+  description:
+  contact:
+    url: https://github.com/distributed-infras
+servers:
+  - url: https://chat-api.short-d.com
+  - url: https://chat-api-staging.short-d.com
+  - url: https://chat-api-testing.short-d.com
+paths:
+  /allocate-connection-hub:
+    get:
+      responses:
+        '200':
+          content:
+            application/json:
+              schema:
+                type: ConnectionHubConfig
+components:
+  schemas:
+    ConnectionHubConfig:
+      type: object
+      required:
+        - host
+        - port
+        - protocol
+      properties:
+        ip:
+          type: string
+          format: host name
+        port:
+          type: number
+        protocol:
+          type: string
+          enum: [websocket, xmpp, mqtt, longpoll]
