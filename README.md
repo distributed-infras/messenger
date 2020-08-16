@@ -42,5 +42,45 @@ git push origin feature/<your-feature-name>
 hub pull-request
 ```
 
+# starting off
 
+## Generate a ssh keypair
+
+```bash
+ssh-keygen
+```
+
+For the most part you can use the default values.  But if you already have
+a `~/.ssh/id_rsa` then you should rename it to something else.
+
+Leave the passphrase empty.
+
+## Paste on github
+
+```bash
+cat ~/.ssh/<name-you-gave-above>.pub
+```
+
+In github, login to your account, click on account settings, go to SSH keys and add your key under `Add an SSH Key`.
+
+Click on `Add key`.
+
+## Test it
+To test it you can use
+
+```bash
+ssh -T git@github.com
+```
+
+It should return with your github user account.
+
+## Change the origin
+
+Copy the the SSH clone of the repository.  And set the origin to this.
+
+```bash
+git remote set origin git@github.com:distributed-infras/messenger.git
+```
+
+Now you should be able to push using your ssh-key just generated.
 
