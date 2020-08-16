@@ -1,4 +1,4 @@
-package config
+package protocol
 
 type Protocol int
 
